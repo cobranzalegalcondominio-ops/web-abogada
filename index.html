@@ -1,98 +1,60 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abogada María Alejandra Parra | Legal Tech & Condominios</title>
+    <title>Abogada María Alejandra Parra | Legal Tech</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #002D62; /* Azul Corporativo */
-            --secondary: #00A86B; /* Verde Éxito (Cobranza) */
-            --light: #F8F9FA;
-            --dark: #1A1A1A;
-        }
-
+        :root { --primary: #002D62; --secondary: #00A86B; --light: #F8F9FA; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            background-color: var(--light);
+        body { font-family: 'Inter', sans-serif; background-color: var(--light); color: #333; }
+        
+        header { 
+            background-color: var(--primary); 
+            color: white; 
+            padding: 30px 20px; 
+            text-align: center; 
         }
 
-        /* Hero Section */
-        header {
-            background: linear-gradient(rgba(0,45,98,0.85), rgba(0,45,98,0.85)), 
-                        url('hero.jpg') no-repeat center center/cover;
-            color: white;
-            padding: 100px 20px;
-            text-align: center;
-        }
-
-        header h1 { font-size: 2.5rem; margin-bottom: 10px; }
-        header p { font-size: 1.2rem; opacity: 0.9; max-width: 700px; margin: 0 auto; }
-
-        /* Contenedor Principal */
-        .container {
-            max-width: 1100px;
-            margin: -50px auto 40px;
-            padding: 0 20px;
-        }
-
-        /* Tarjetas de Servicios */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
+        .hero-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            gap: 30px;
+            flex-wrap: wrap;
             background: white;
-            padding: 40px 30px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            text-align: center;
-            transition: transform 0.3s ease;
         }
 
-        .card:hover { transform: translateY(-10px); }
-        .card h3 { color: var(--primary); margin-bottom: 15px; font-size: 1.4rem; }
-        .card p { font-size: 0.95rem; color: #666; }
-        .icon { font-size: 2.5rem; margin-bottom: 20px; display: block; }
-
-        /* Botón de Acción */
-        .cta-section {
-            text-align: center;
-            padding: 60px 20px;
+        .profile-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--primary);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
 
+        .hero-text { max-width: 500px; text-align: left; }
+        .hero-text h2 { color: var(--primary); margin-bottom: 15px; font-size: 1.8rem; }
+        
         .btn {
             background-color: var(--secondary);
             color: white;
-            padding: 18px 35px;
+            padding: 15px 25px;
             text-decoration: none;
             border-radius: 8px;
             font-weight: bold;
-            font-size: 1.1rem;
             display: inline-block;
-            transition: background 0.3s;
+            margin-top: 20px;
         }
 
-        .btn:hover { background-color: #008f5a; }
-
-        footer {
-            text-align: center;
-            padding: 40px;
-            font-size: 0.8rem;
-            color: #888;
-            border-top: 1px solid #ddd;
-        }
+        footer { text-align: center; padding: 30px; font-size: 0.8rem; color: #777; }
 
         @media (max-width: 768px) {
-            header h1 { font-size: 1.8rem; }
-            .container { margin-top: 20px; }
+            .hero-container { flex-direction: column; text-align: center; }
+            .hero-text { text-align: center; }
         }
     </style>
 </head>
@@ -100,43 +62,23 @@
 
 <header>
     <h1>Abogada María Alejandra Parra</h1>
-    <p>Asesoría Jurídica Integral y Soluciones Tecnológicas para Condominios y Administradoras.</p>
+    <p>Especialista en Derecho Condominal & Legal Tech</p>
 </header>
 
-<div class="container">
-    <div class="services-grid">
-        <div class="card">
-            <span class="icon">⚖️</span>
-            <h3>Gestión Legal</h3>
-            <p>Especialista en derecho condominal, redacción de documentos, reglamentos y resolución de conflictos en juntas de condominio.</p>
-        </div>
-
-        <div class="card">
-            <span class="icon">📱</span>
-            <h3>Cobranza Omnicanal</h3>
-            <p>Sistema automatizado de recordatorios vía WhatsApp y Telegram con seguimiento inteligente de mora en tiempo real.</p>
-        </div>
-
-        <div class="card">
-            <span class="icon">⚙️</span>
-            <h3>Automatización IT</h3>
-            <p>Implementación de software administrativo y flujos de trabajo eficientes para administradoras de alta exigencia.</p>
-        </div>
+<div class="hero-container">
+    <img src="MP.jpg" alt="Abogada Mariale Parra" class="profile-img">
+    
+    <div class="hero-text">
+        <h2>Asesoría Profesional</h2>
+        <p>Soluciones integrales para juntas de condominio y administradoras, apoyadas en tecnología para una gestión eficiente y transparente.</p>
+        <a href="https://wa.me/584120000000?text=Hola%20Abogada%20Mariale" class="btn">Contactar por WhatsApp</a>
     </div>
 </div>
 
-<section class="cta-section">
-    <h2>¿Desea optimizar su gestión hoy mismo?</h2>
-    <p style="margin-bottom: 30px; color: #666;">Hablemos sobre cómo reducir la morosidad y profesionalizar su comunidad.</p>
-    <a href="https://wa.me/584242624559?text=Hola%20Abogada%20Mariale,%20deseo%20información%20sobre%20sus%20servicios" class="btn">
-        Contactar por WhatsApp
-    </a>
-</section>
-
 <footer>
     <p>Desarrollado por Lisbeth Parra Martínez (Asesor IT) &copy; 2026</p>
-    <p>Venezuela - El Hatillo | Caracas</p>
+    <p>Caracas, Venezuela</p>
 </footer>
 
 </body>
-</html>
+</html>                
