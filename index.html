@@ -1,84 +1,117 @@
-    <!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abogada María Alejandra Parra | Legal Tech</title>
+    <title>Abogada María Alejandra Parra | Legal Tech & Condominios</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #002D62; --secondary: #00A86B; --light: #F8F9FA; }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--light); color: #333; }
-        
-        header { 
-            background-color: var(--primary); 
-            color: white; 
-            padding: 30px 20px; 
-            text-align: center; 
+        :root {
+            --primary: #002D62; /* Azul Corporativo */
+            --secondary: #00A86B; /* Verde Éxito (Cobranza) */
+            --light: #F8F9FA;
+            --dark: #1A1A1A;
         }
 
-        .hero-container {
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+
+        /* Banner de Encabezado Superior (Fondo Azul) */
+        header.top-banner {
+            background-color: var(--primary);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        header.top-banner h1 { font-size: 2.2rem; margin-bottom: 5px; }
+        header.top-banner p { font-size: 1rem; opacity: 0.9; }
+
+        /* Sección Hero (con la foto de oficina de fondo) */
+        .hero-integrated {
+            position: relative;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('oficina_mariale.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            min-height: 400px;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 40px 20px;
-            gap: 30px;
-            flex-wrap: wrap;
-            background: white;
+            flex-direction: column;
         }
 
-        .profile-img {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid var(--primary);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        .hero-details {
+            max-width: 700px;
+            background: rgba(0,45,98,0.8); /* Fondo azul semitransparente para legibilidad */
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
-        .hero-text { max-width: 500px; text-align: left; }
-        .hero-text h2 { color: var(--primary); margin-bottom: 15px; font-size: 1.8rem; }
-        
+        .hero-details h2 { font-size: 1.8rem; margin-bottom: 15px; }
+        .hero-details p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 30px; }
+
+        /* Botón de Acción */
         .btn {
             background-color: var(--secondary);
             color: white;
-            padding: 15px 25px;
+            padding: 18px 35px;
             text-decoration: none;
             border-radius: 8px;
             font-weight: bold;
+            font-size: 1.1rem;
             display: inline-block;
-            margin-top: 20px;
+            transition: background 0.3s;
         }
 
-        footer { text-align: center; padding: 30px; font-size: 0.8rem; color: #777; }
+        .btn:hover { background-color: #008f5a; }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.8rem;
+            color: #888;
+            border-top: 1px solid #ddd;
+        }
 
         @media (max-width: 768px) {
-            .hero-container { flex-direction: column; text-align: center; }
-            .hero-text { text-align: center; }
+            header.top-banner h1 { font-size: 1.8rem; }
+            .hero-integrated { padding: 60px 20px; min-height: 300px; }
+            .hero-details { padding: 20px; }
+            .hero-details h2 { font-size: 1.5rem; }
         }
     </style>
 </head>
 <body>
 
-<header>
+<header class="top-banner">
     <h1>Abogada María Alejandra Parra</h1>
-    <p>Especialista en Derecho Condominal & Legal Tech</p>
+    <p>Legal Tech & Condominios</p>
 </header>
 
-<div class="hero-container">
-    <img src="MP.jpg" alt="Abogada Mariale Parra" class="profile-img">
-    
-    <div class="hero-text">
-        <h2>Asesoría Profesional</h2>
-        <p>Soluciones integrales para juntas de condominio y administradoras, apoyadas en tecnología para una gestión eficiente y transparente.</p>
-        <a href="https://wa.me/584120000000?text=Hola%20Abogada%20Mariale" class="btn">Contactar por WhatsApp</a>
+<div class="hero-integrated">
+    <div class="hero-details">
+        <h2>Asesoría Jurídica Integral y Soluciones Tecnológicas</h2>
+        <p>Optimizamos la gestión de juntas de condominio y administradoras, fusionando la experiencia legal con herramientas digitales para reducir la morosidad y profesionalizar su comunidad.</p>
+        <a href="https://wa.me/584120000000?text=Hola%20Abogada%20Mariale,%20deseo%20información%20sobre%20sus%20servicios" class="btn">
+            Contactar Bufete
+        </a>
     </div>
 </div>
 
 <footer>
     <p>Desarrollado por Lisbeth Parra Martínez (Asesor IT) &copy; 2026</p>
-    <p>Caracas, Venezuela</p>
+    <p>Venezuela - El Hatillo | Caracas</p>
 </footer>
 
 </body>
-</html>                
+</html>
+    
