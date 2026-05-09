@@ -1,4 +1,5 @@
-   <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -22,44 +23,52 @@
             background-color: var(--light);
         }
 
-        /* Banner de Encabezado Superior (Fondo Azul) */
-        header.top-banner {
-            background-color: var(--primary);
-            color: white;
-            padding: 30px 20px;
-            text-align: center;
-        }
-
-        header.top-banner h1 { font-size: 2.2rem; margin-bottom: 5px; }
-        header.top-banner p { font-size: 1rem; opacity: 0.9; }
-
-        /* Sección Hero (con la foto de oficina de fondo) */
-        .hero-integrated {
-            position: relative;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                        url('oficina_mariale.jpg') no-repeat center center/cover;
+        /* Hero Section */
+        header {
+            background: linear-gradient(rgba(0,45,98,0.85), rgba(0,45,98,0.85)), 
+                        url('hero.jpg') no-repeat center center/cover;
             color: white;
             padding: 100px 20px;
             text-align: center;
-            min-height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
         }
 
-        .hero-details {
-            max-width: 700px;
-            background: rgba(0,45,98,0.8); /* Fondo azul semitransparente para legibilidad */
-            padding: 40px;
+        header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        header p { font-size: 1.2rem; opacity: 0.9; max-width: 700px; margin: 0 auto; }
+
+        /* Contenedor Principal */
+        .container {
+            max-width: 1100px;
+            margin: -50px auto 40px;
+            padding: 0 20px;
+        }
+
+        /* Tarjetas de Servicios */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 40px 30px;
             border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
         }
 
-        .hero-details h2 { font-size: 1.8rem; margin-bottom: 15px; }
-        .hero-details p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 30px; }
+        .card:hover { transform: translateY(-10px); }
+        .card h3 { color: var(--primary); margin-bottom: 15px; font-size: 1.4rem; }
+        .card p { font-size: 0.95rem; color: #666; }
+        .icon { font-size: 2.5rem; margin-bottom: 20px; display: block; }
 
         /* Botón de Acción */
+        .cta-section {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
         .btn {
             background-color: var(--secondary);
             color: white;
@@ -83,29 +92,47 @@
         }
 
         @media (max-width: 768px) {
-            header.top-banner h1 { font-size: 1.8rem; }
-            .hero-integrated { padding: 60px 20px; min-height: 300px; }
-            .hero-details { padding: 20px; }
-            .hero-details h2 { font-size: 1.5rem; }
+            header h1 { font-size: 1.8rem; }
+            .container { margin-top: 20px; }
         }
     </style>
 </head>
 <body>
 
-<header class="top-banner">
+<header>
     <h1>Abogada María Alejandra Parra</h1>
-    <p>Legal Tech & Condominios</p>
+    <p>Asesoría Jurídica Integral y Soluciones Tecnológicas para Condominios y Administradoras.</p>
 </header>
 
-<div class="hero-integrated">
-    <div class="hero-details">
-        <h2>Asesoría Jurídica Integral y Soluciones Tecnológicas</h2>
-        <p>Optimizamos la gestión de juntas de condominio y administradoras, fusionando la experiencia legal con herramientas digitales para reducir la morosidad y profesionalizar su comunidad.</p>
-        <a href="https://wa.me/584120000000?text=Hola%20Abogada%20Mariale,%20deseo%20información%20sobre%20sus%20servicios" class="btn">
-            Contactar Bufete
-        </a>
+<div class="container">
+    <div class="services-grid">
+        <div class="card">
+            <span class="icon">⚖️</span>
+            <h3>Gestión Legal</h3>
+            <p>Especialista en derecho condominal, redacción de documentos, reglamentos y resolución de conflictos en juntas de condominio.</p>
+        </div>
+
+        <div class="card">
+            <span class="icon">📱</span>
+            <h3>Cobranza Omnicanal</h3>
+            <p>Sistema automatizado de recordatorios vía WhatsApp y Telegram con seguimiento inteligente de mora en tiempo real.</p>
+        </div>
+
+        <div class="card">
+            <span class="icon">⚙️</span>
+            <h3>Automatización IT</h3>
+            <p>Implementación de software administrativo y flujos de trabajo eficientes para administradoras de alta exigencia.</p>
+        </div>
     </div>
 </div>
+
+<section class="cta-section">
+    <h2>¿Desea optimizar su gestión hoy mismo?</h2>
+    <p style="margin-bottom: 30px; color: #666;">Hablemos sobre cómo reducir la morosidad y profesionalizar su comunidad.</p>
+    <a href="https://wa.me/584242624549?text=Hola%20Abogada%20Mariale,%20deseo%20información%20sobre%20sus%20servicios" class="btn">
+        Contactar por WhatsApp
+    </a>
+</section>
 
 <footer>
     <p>Desarrollado por Lisbeth Parra Martínez (Asesor IT) &copy; 2026</p>
@@ -114,4 +141,3 @@
 
 </body>
 </html>
-    
