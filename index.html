@@ -5,23 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abogada María Alejandra Parra | Legal & Prop-Tech</title>
     
-    <!-- Optimización: Precarga de imagen principal para mejorar el LCP (Largest Contentful Paint) -->
+    <!-- Optimización: Precarga de imagen principal para mejorar el LCP -->
     <link rel="preload" as="image" href="foto-abogada.jpg">
     <!-- Importación de tipografía moderna Inter desde Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     
     <style>
-        /* Variables Globales: Definición de la paleta de colores para mantener consistencia */
+        /* Variables Globales */
         :root {
-            --primary: #1A1C1E;    /* Negro azulado para textos y fondos oscuros */
-            --accent: #007AFF;     /* Azul institucional para acentos */
-            --tech: #6366F1;       /* Violeta para elementos tecnológicos */
-            --secondary: #00A86B;  /* Verde para acciones positivas (WhatsApp/Éxito) */
-            --bg-body: #F8FAFC;    /* Gris muy claro para el fondo general */
+            --primary: #1A1C1E;    
+            --accent: #007AFF;     
+            --tech: #6366F1;       
+            --secondary: #00A86B;  
+            --bg-body: #F8FAFC;    
             --white: #FFFFFF;
         }
 
-        /* Reseteo básico y configuración de fuente */
+        /* Reseteo básico */
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { 
             font-family: 'Inter', sans-serif; 
@@ -30,7 +30,7 @@
             line-height: 1.6; 
         }
 
-        /* Hero / Encabezado: Primera impresión con degradado profesional */
+        /* Hero / Encabezado */
         header {
             background: linear-gradient(135deg, var(--primary) 0%, #334155 100%);
             color: white;
@@ -38,7 +38,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-wrap: wrap; /* Permite que la foto baje en dispositivos móviles */
+            flex-wrap: wrap;
             gap: 50px;
         }
 
@@ -46,14 +46,12 @@
         header h1 { font-size: 3rem; margin-bottom: 20px; font-weight: 700; line-height: 1.1; }
         header p { font-size: 1.2rem; opacity: 0.9; margin-bottom: 35px; }
 
-        /* Contenedor de botones de acción rápida */
         .header-btns {
             display: flex;
             gap: 15px;
             flex-wrap: wrap;
         }
 
-        /* Estilización de la fotografía profesional */
         .photo-container {
             width: 320px;
             height: 420px;
@@ -66,7 +64,7 @@
 
         .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
 
-        /* Sección Tech-Highlight: Resalta la propuesta de valor tecnológica */
+        /* Sección Tech-Highlight */
         .tech-highlight {
             background: linear-gradient(rgba(99, 102, 241, 0.05), rgba(99, 102, 241, 0.1));
             border: 1px solid rgba(99, 102, 241, 0.2);
@@ -91,7 +89,7 @@
             display: inline-block; 
         }
 
-        /* Grid de Servicios: Diseño responsivo que se ajusta de 1 a 3 columnas */
+        /* Grid de Servicios */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -108,14 +106,12 @@
             overflow: hidden;
         }
         .card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
-        
-        /* Detalle estético: línea superior en las tarjetas */
         .card::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: var(--accent); }
         .tech-card::before { background: var(--tech); }
 
         .icon { font-size: 3rem; margin-bottom: 20px; display: block; }
 
-        /* Contenedor de Video: Mantiene la proporción 16:9 de forma responsiva */
+        /* Video responsivo */
         .video-wrapper {
             position: relative;
             padding-bottom: 56.25%;
@@ -131,7 +127,7 @@
             border: none;
         }
 
-        /* Testimonios: Grid de reseñas de clientes */
+        /* Testimonios Reales */
         .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -140,19 +136,36 @@
         }
         .testimonial-card {
             background: white;
-            padding: 35px;
+            padding: 40px 35px;
             border-radius: 20px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.03);
             position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
-        /* Comillas decorativas en testimonios */
         .testimonial-card::before {
             content: "“";
             position: absolute; top: 10px; left: 20px; font-size: 5rem;
             color: var(--tech); opacity: 0.15; font-family: serif;
         }
+        .testimonial-text { 
+            font-style: italic; 
+            color: #475569; 
+            margin-bottom: 20px; 
+            font-size: 0.95rem;
+            position: relative;
+            z-index: 1;
+        }
+        .testimonial-author { 
+            font-weight: 700; 
+            color: var(--primary); 
+            display: block;
+            border-top: 1px solid #F1F5F9;
+            padding-top: 15px;
+        }
 
-        /* Botón Flotante de WhatsApp: Siempre visible para contacto directo */
+        /* Botón Flotante WhatsApp */
         .whatsapp-float {
             position: fixed;
             bottom: 30px;
@@ -169,7 +182,7 @@
         }
         .whatsapp-float:hover { transform: scale(1.1); }
 
-        /* Botones de Llamado a la Acción (CTA) */
+        /* Botones Generales */
         .btn-ws {
             background: white;
             color: var(--secondary);
@@ -185,7 +198,6 @@
         }
         .btn-ws:hover { opacity: 0.9; transform: translateY(-2px); }
 
-        /* Caja de Cierre: Refuerza la conversión al final de la página */
         .cta-box {
             background: var(--secondary);
             color: white;
@@ -200,22 +212,17 @@
 </head>
 <body>
 
-<!-- Enlace flotante de WhatsApp -->
 <a href="https://wa.me/584242624559?text=Hola%20Abogada%20Mariale" class="whatsapp-float" target="_blank">W</a>
 
 <header>
     <div class="header-text">
-        <!-- Título con enfoque en beneficios claros para el cliente -->
         <h1>Recupere la solvencia de su Condominio con Tecnología Legal</h1>
         <p>Especialista en Derecho Condominal y Prop-Tech. Optimizamos su recaudación mediante cobranza omnicanal y blindaje jurídico profesional en Caracas.</p>
         
         <div class="header-btns">
-            <!-- Llamado a la acción principal -->
             <a href="https://wa.me/584242624559?text=Hola%20Abogada%20Mariale,%20necesito%20un%20diagnóstico%20de%20mi%20condominio" class="btn-ws">
                 Solicitar Diagnóstico Gratuito
             </a>
-            
-            <!-- Botón secundario para usuarios recurrentes -->
             <a href="TU_LINK_DEL_SISTEMA_AQUI" class="btn-ws" style="background-color: transparent; border: 2px solid white; color: white;">
                 Acceso al Sistema
             </a>
@@ -228,75 +235,79 @@
 
 <div class="container">
     
-    <!-- Bloque de producto propio: Sistema Administrativo -->
     <div class="tech-highlight">
         <div class="tech-content">
             <span class="tech-tag">Exclusivo para Administradoras</span>
             <h2>Sistema Administrativo Integral</h2>
-            <p>Hemos desarrollado una plataforma 360° diseñada específicamente para las necesidades del mercado inmobiliario venezolano. Controle finanzas, reportes y comunicación en un solo lugar.</p>
+            <p>Control de finanzas y comunicación en un solo lugar con nuestra plataforma 360°.</p>
             <ul style="margin: 20px 0; list-style: none;">
                 <li>✅ Conciliación bancaria automatizada</li>
                 <li>✅ Generación de recibos digitales instantáneos</li>
                 <li>✅ Reportes de gestión en tiempo real</li>
             </ul>
         </div>
-        <!-- Icono decorativo de gran tamaño con baja opacidad -->
         <div class="icon" style="font-size: 8rem; opacity: 0.1;">💻</div>
     </div>
 
-    <!-- Sección de descripción de servicios -->
     <div class="services-grid">
-        <!-- Servicio 1: Enfoque tecnológico -->
         <div class="card tech-card">
             <span class="icon">📲</span>
             <h3>Cobranza Omnicanal</h3>
-            <p>Automatice el seguimiento de mora a través de <strong>WhatsApp, Correo, SMS y Telegram</strong>. Nuestra tecnología contacta al copropietario de forma profesional, aumentando la recaudación hasta en un 40%.</p>
+            <p>Automatice el seguimiento de mora a través de <strong>WhatsApp y Correo</strong>. Aumente la recaudación hasta en un 40%.</p>
         </div>
 
-        <!-- Servicio 2: Enfoque legal tradicional -->
         <div class="card">
             <span class="icon">⚖️</span>
             <h3>Blindaje Jurídico</h3>
-            <p>Especialista en Derecho Condominal para la redacción de actas, reglamentos y mediación en asambleas. Resolvemos conflictos con base en la Ley de Propiedad Horizontal.</p>
+            <p>Redacción de actas y mediación profesional bajo la Ley de Propiedad Horizontal.</p>
         </div>
 
-        <!-- Servicio 3: Enfoque en eficiencia operativa -->
         <div class="card tech-card">
             <span class="icon">⚙️</span>
             <h3>Automatización IT</h3>
-            <p>Auditamos sus flujos de trabajo actuales y los transformamos mediante integraciones tecnológicas para eliminar el error humano y optimizar su tiempo.</p>
+            <p>Transformamos sus flujos de trabajo actuales eliminando el error humano mediante tecnología.</p>
         </div>
     </div>
 
-    <!-- Demostración visual: Genera confianza mediante video -->
     <section>
         <h2 style="text-align: center; margin-bottom: 20px;">Vea nuestra tecnología en acción</h2>
         <div class="video-wrapper">
-            <!-- Reemplazar ID de video de YouTube cuando esté disponible -->
             <iframe src="https://www.youtube.com/embed/6oCgFTqCEQc" allowfullscreen title="Video Demostrativo"></iframe>
         </div>
     </section>
 
-    <!-- Prueba Social: Testimonios que validan el servicio -->
+    <!-- SECCIÓN TESTIMONIOS REALES -->
     <section>
-        <h2 style="text-align: center;">Lo que dicen nuestros clientes</h2>
+        <h2 style="text-align: center;">Lo que dicen nuestras comunidades</h2>
         <div class="testimonials-grid">
+            
+            <!-- Testimonio Edificio Valle Verde -->
             <div class="testimonial-card">
-                <p class="testimonial-text">"Gracias al sistema y a la asesoría de la Dra. María Alejandra, logramos reducir la morosidad en un 35%."</p>
-                <span class="testimonial-author">Ana García</span>
+                <p class="testimonial-text">
+                    "Agradezco a Dios haberlos conocido para presentarlos ante semejante audiencia... me siento con mucha mejor energía ante la comunidad. No se esperaron semejante exposición."
+                </p>
+                <span class="testimonial-author">Junta de Condominio, Edificio Valle Verde</span>
             </div>
+
+            <!-- Testimonio Edificio Suerte -->
             <div class="testimonial-card">
-                <p class="testimonial-text">"La cobranza automatizada cambió las reglas del juego. El flujo de caja ahora es constante."</p>
-                <span class="testimonial-author">Carlos Pérez</span>
+                <p class="testimonial-text">
+                    "Anexo pago total de deuda más honorarios. Gracias Dra. Mariale por tu profesionalismo y educación en la gestión de la deuda."
+                </p>
+                <span class="testimonial-author">Copropietario, Edificio Suerte</span>
             </div>
+
+            <!-- Testimonio Edificio Tiniquijina -->
             <div class="testimonial-card">
-                <p class="testimonial-text">"Tener soporte legal y tecnológico en un solo lugar nos ha dado una tranquilidad increíble."</p>
-                <span class="testimonial-author">Luis Mendoza</span>
+                <p class="testimonial-text">
+                    "Gracias Dra. Mariale, todo el reconocimiento se lo lleva usted. Nos encantó su profesionalismo y su forma de ser."
+                </p>
+                <span class="testimonial-author">Administración, Edificio Tiniquijina</span>
             </div>
+
         </div>
     </section>
 
-    <!-- Llamado a la acción final para cierre de página -->
     <div class="cta-box">
         <h2>¿Listo para profesionalizar su comunidad?</h2>
         <p>Hablemos sobre cómo optimizar su administración hoy mismo.</p>
@@ -307,7 +318,6 @@
 
 <footer>
     <p><strong>Abogada María Alejandra Parra</strong> | Caracas, Venezuela</p>
-    <!-- Créditos de desarrollo y propiedad intelectual -->
     <p>Tecnología: Lisbeth Parra Martínez (Asesor IT) &copy; 2026</p>
 </footer>
 
