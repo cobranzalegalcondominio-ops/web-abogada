@@ -3,8 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abogada María Alejandra Parra | Legal & Prop-Tech</title>
     
+    <title>Abogada María Alejandra Parra | Gestión de Condominios en Caracas</title>
+    <meta name="description" content="Líderes en Legal Tech y cobranza omnicanal para toda Caracas. Reducción de morosidad y blindaje jurídico para condominios y administradoras de vanguardia.">
+    <meta name="keywords" content="Abogada, Condominios, Caracas, Cobranza, Legal Tech, n8n, Venezuela, Morosidad, Administradoras, Prop-Tech Caracas">
+    
+    <meta property="og:title" content="Abogada María Alejandra Parra | Legal & Prop-Tech Caracas">
+    <meta property="og:description" content="Soluciones tecnológicas para la gestión de condominios en toda Caracas.">
+    <meta property="og:image" content="foto-abogada.jpg">
+    <meta property="og:url" content="https://tu-usuario.github.io/tu-repo/">
+
     <link rel="preload" as="image" href="foto-abogada.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     
@@ -15,13 +23,12 @@
             --tech: #6366F1;       
             --secondary: #00A86B;  
             --bg-body: #F8FAFC;    
-            --white: #FFFFFF;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Inter', sans-serif; background-color: var(--bg-body); color: #1E293B; line-height: 1.6; }
 
-        /* Hero */
+        /* Hero Section */
         header {
             background: linear-gradient(135deg, var(--primary) 0%, #334155 100%);
             color: white;
@@ -44,12 +51,13 @@
             overflow: hidden;
             box-shadow: 0 30px 60px rgba(0,0,0,0.4);
             border: 2px solid rgba(255,255,255,0.1);
+            background-color: #334155;
         }
         .header-photo { width: 100%; height: 100%; object-fit: cover; }
 
         .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
 
-        /* Sistema Destacado */
+        /* Highlight */
         .tech-highlight {
             background: linear-gradient(rgba(99, 102, 241, 0.05), rgba(99, 102, 241, 0.1));
             border: 1px solid rgba(99, 102, 241, 0.2);
@@ -61,11 +69,10 @@
             gap: 40px;
             flex-wrap: wrap;
         }
-        .tech-content { flex: 1; min-width: 300px; }
         .tech-tag { background: var(--tech); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; margin-bottom: 15px; display: inline-block; }
         .tech-highlight h2 { font-size: 2.2rem; margin-bottom: 15px; color: var(--primary); }
 
-        /* Grid de Servicios */
+        /* Services */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -86,58 +93,19 @@
         .tech-card::before { background: var(--tech); }
 
         .icon { font-size: 3rem; margin-bottom: 20px; display: block; }
-        .card h3 { font-size: 1.5rem; margin-bottom: 15px; }
 
-        /* Video */
-        .video-wrapper {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 24px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            margin: 40px 0 80px;
-        }
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            border: none;
-        }
-
-        /* Testimonios */
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
-        }
-        .testimonial-card {
-            background: white;
-            padding: 35px;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.03);
-            position: relative;
-        }
-        .testimonial-card::before {
-            content: "“";
-            position: absolute; top: 10px; left: 20px; font-size: 5rem;
-            color: var(--tech); opacity: 0.15; font-family: serif;
-        }
-        .testimonial-text { font-style: italic; color: #475569; margin-bottom: 20px; }
-        .testimonial-author { font-weight: 700; color: var(--primary); }
-
-        /* Botón Flotante WhatsApp */
+        /* WhatsApp Button */
         .whatsapp-float {
             position: fixed;
             bottom: 30px;
             right: 30px;
             background-color: var(--secondary);
             color: white;
-            width: 60px; height: 60px;
+            width: 65px; height: 65px;
             border-radius: 50px;
             display: flex; align-items: center; justify-content: center;
-            font-size: 30px; text-decoration: none;
-            box-shadow: 2px 5px 15px rgba(0,0,0,0.3);
+            font-size: 32px; text-decoration: none;
+            box-shadow: 2px 5px 20px rgba(0,0,0,0.3);
             z-index: 1000;
             transition: 0.3s;
         }
@@ -164,94 +132,70 @@
         }
 
         footer { text-align: center; padding: 60px; color: #64748B; font-size: 0.9rem; }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.2rem; }
+            header { padding: 60px 20px; text-align: center; }
+            .photo-container { width: 280px; height: 350px; }
+        }
     </style>
 </head>
 <body>
 
-<a href="https://wa.me/584242624559?text=Hola%20Abogada%20Mariale" class="whatsapp-float" target="_blank">W</a>
+<a href="https://wa.me/584242624559?text=Hola%20Abogada%20Mariale" class="whatsapp-float" target="_blank">
+    <span style="font-family: sans-serif; font-weight: bold;">W</span>
+</a>
 
 <header>
     <div class="header-text">
-        <h1>Transformamos la Gestión de su Condominio con Tecnología Legal</h1>
-        <p>Soluciones integrales de cobranza omnicanal, automatización de procesos y el sistema administrativo más robusto para administradoras en Caracas.</p>
-        <a href="https://wa.me/584242624559?text=Hola%20Abogada%20Mariale,%20quiero%20ver%20la%20demo" class="btn-ws" style="color: var(--accent);">Ver Demo del Sistema</a>
+        <h1>Transformamos la Gestión de Condominios en Toda Caracas</h1>
+        <p>Soluciones de cobranza inteligente, blindaje jurídico y tecnología administrativa para comunidades modernas en el área metropolitana.</p>
+        <a href="https://wa.me/584242624559?text=Hola%20Abogada%20Mariale,%20quiero%20ver%20la%20demo" class="btn-ws">Ver Demo del Sistema</a>
     </div>
     <div class="photo-container">
-        <img src="foto-abogada.jpg" alt="Abogada María Alejandra Parra" class="header-photo">
+        <img src="foto-abogada.jpg" alt="Abogada María Alejandra Parra" class="header-photo" fetchpriority="high">
     </div>
 </header>
 
 <div class="container">
     
-    <!-- Sistema Administrativo Destacado -->
     <div class="tech-highlight">
         <div class="tech-content">
-            <span class="tech-tag">Exclusivo para Administradoras</span>
-            <h2>Sistema Administrativo Integral</h2>
-            <p>Hemos desarrollado una plataforma 360° diseñada específicamente para las necesidades del mercado inmobiliario venezolano. Controle finanzas, reportes y comunicación en un solo lugar.</p>
+            <span class="tech-tag">Alcance Metropolitano</span>
+            <h2>Sistema Administrativo 360°</h2>
+            <p>Una plataforma robusta diseñada para optimizar administradoras y juntas de condominio en los 5 municipios de Caracas. Elimine la burocracia con tecnología Prop-Tech.</p>
             <ul style="margin: 20px 0; list-style: none;">
-                <li>✅ Conciliación bancaria automatizada</li>
-                <li>✅ Generación de recibos digitales instantáneos</li>
-                <li>✅ Reportes de gestión en tiempo real</li>
+                <li>✅ Conciliación bancaria en tiempo real</li>
+                <li>✅ Recibos digitales con envío masivo</li>
+                <li>✅ Transparencia financiera total</li>
             </ul>
         </div>
         <div class="icon" style="font-size: 8rem; opacity: 0.1;">💻</div>
     </div>
 
-    <!-- BLOQUE DE SERVICIOS RECUPERADO -->
     <div class="services-grid">
-        <!-- Servicio 1 -->
         <div class="card tech-card">
             <span class="icon">📲</span>
             <h3>Cobranza Omnicanal</h3>
-            <p>Automatice el seguimiento de mora a través de <strong>WhatsApp, Correo, SMS y Telegram</strong>. Nuestra tecnología contacta al copropietario de forma profesional, aumentando la recaudación hasta en un 40%.</p>
+            <p>Seguimiento automatizado para copropietarios en Caracas vía WhatsApp y Correo. Reducción efectiva de la morosidad mediante flujos inteligentes.</p>
         </div>
 
-        <!-- Servicio 2 -->
         <div class="card">
             <span class="icon">⚖️</span>
             <h3>Blindaje Jurídico</h3>
-            <p>Especialista en Derecho Condominal para la redacción de actas, reglamentos y mediación en asambleas. Resolvemos conflictos con base en la Ley de Propiedad Horizontal.</p>
+            <p>Especialista en Derecho Condominal. Redacción de documentos, reglamentos y resolución de conflictos bajo la LPH en el mercado venezolano.</p>
         </div>
 
-        <!-- Servicio 3 -->
         <div class="card tech-card">
             <span class="icon">⚙️</span>
             <h3>Automatización IT</h3>
-            <p>Auditamos sus flujos de trabajo actuales y los transformamos mediante integraciones tecnológicas para eliminar el error humano y optimizar su tiempo.</p>
+            <p>Transformamos sus procesos manuales en flujos digitales eficientes. Tecnología de punta para administraciones de alto rendimiento.</p>
         </div>
     </div>
 
-    <!-- SECCIÓN DE VIDEO ACTUALIZADA -->
-    <section>
-        <h2 style="text-align: center; margin-bottom: 20px;">Vea nuestra tecnología en acción</h2>
-        <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/6oCgFTqCEQc" allowfullscreen></iframe>
-        </div>
-    </section>
-
-    <!-- SECCIÓN TESTIMONIOS -->
-    <section>
-        <h2 style="text-align: center;">Lo que dicen nuestros clientes</h2>
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <p class="testimonial-text">"Gracias al sistema y a la asesoría de la Dra. María Alejandra, logramos reducir la morosidad en un 35%."</p>
-                <span class="testimonial-author">Ana García</span>
-            </div>
-            <div class="testimonial-card">
-                <p class="testimonial-text">"La cobranza automatizada cambió las reglas del juego. El flujo de caja ahora es constante."</p>
-                <span class="testimonial-author">Carlos Pérez</span>
-            </div>
-            <div class="testimonial-card">
-                <p class="testimonial-text">"Tener soporte legal y tecnológico en un solo lugar nos ha dado una tranquilidad increíble."</p>
-                <span class="testimonial-author">Luis Mendoza</span>
-            </div>
-        </div>
-    </section>
-
     <div class="cta-box">
         <h2>¿Listo para profesionalizar su comunidad?</h2>
-        <p>Hablemos sobre cómo optimizar su administración hoy mismo.</p>
+        <p>Atención personalizada en toda la Gran Caracas.</p>
         <a href="https://wa.me/584242624559?text=Hola%20Abogada%20Mariale,%20necesito%20un%20diagnóstico" class="btn-ws">Solicitar Diagnóstico Gratuito</a>
     </div>
 
@@ -259,12 +203,11 @@
 
 <footer>
     <p><strong>Abogada María Alejandra Parra</strong> | Caracas, Venezuela</p>
-    <p>Tecnología: Lisbeth Parra Martínez (Asesor IT) &copy; 2026</p>
+    <p>Tecnología Legal desarrollada por Lisbeth Parra Martínez (Asesor IT) &copy; 2026</p>
 </footer>
 
 </body>
-</html>
-      
+</html>      
        
          
           
