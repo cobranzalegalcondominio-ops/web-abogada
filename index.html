@@ -1,9 +1,9 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abogada María Alejandra Parra | Legal Tech</title>
+    <title>Abogada María Alejandra Parra | Legal Tech & Condominios</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -22,7 +22,7 @@
             background-color: var(--light);
         }
 
-        /* Hero Section Adaptada (Banner Lateral) */
+        /* Hero Section - Banner Superior */
         header {
             background-color: var(--primary);
             color: white;
@@ -37,40 +37,21 @@
 
         .header-text { max-width: 600px; }
         header h1 { font-size: 2.5rem; margin-bottom: 10px; }
-        header p { font-size: 1.2rem; opacity: 0.9; margin-bottom: 25px; }
+        header p { font-size: 1.2rem; opacity: 0.9; }
 
         .header-photo {
-            max-width: 350px;
+            max-width: 320px;
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
-        /* Estilo del Botón */
-        .btn {
-            background-color: var(--secondary);
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            display: inline-block;
-            transition: transform 0.3s, background 0.3s;
-        }
-
-        .btn:hover {
-            background-color: #008f5a;
-            transform: translateY(-3px);
-        }
-
-        /* Contenedor Principal */
+        /* Contenedor de Servicios */
         .container {
             max-width: 1100px;
             margin: 40px auto;
             padding: 0 20px;
         }
 
-        /* Tarjetas de Servicios */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -91,20 +72,50 @@
         .card p { font-size: 0.95rem; color: #666; }
         .icon { font-size: 2.5rem; margin-bottom: 20px; display: block; }
 
+        /* Sección de Cierre y WhatsApp (Tu favorita) */
+        .cta-section {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: white;
+            border-top: 1px solid #eee;
+        }
+
+        .cta-section h2 { 
+            color: var(--primary); 
+            font-size: 2rem; 
+            margin-bottom: 15px; 
+        }
+
+        .btn {
+            background-color: var(--secondary);
+            color: white;
+            padding: 18px 35px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            display: inline-block;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #008f5a;
+            transform: scale(1.05);
+        }
+
         footer {
             text-align: center;
             padding: 40px;
             font-size: 0.8rem;
             color: #888;
-            border-top: 1px solid #ddd;
         }
 
-        /* Adaptaciones Móviles */
         @media (max-width: 768px) {
-            header { flex-direction: column; text-align: center; padding: 40px 20px; }
+            header { flex-direction: column; text-align: center; }
             .header-text { text-align: center; }
             header h1 { font-size: 1.8rem; }
-            .header-photo { max-width: 250px; margin-top: 20px; }
+            .header-photo { max-width: 250px; }
+            .cta-section h2 { font-size: 1.6rem; }
         }
     </style>
 </head>
@@ -114,11 +125,8 @@
     <div class="header-text">
         <h1>Abogada María Alejandra Parra</h1>
         <p>Asesoría Jurídica Integral y Soluciones Tecnológicas para Condominios y Administradoras.</p>
-        <a href="https://wa.me/584242624559?text=Hola%20Abogada%20Mariale,%20deseo%20información%20sobre%20sus%20servicios" class="btn">
-            Contactar por WhatsApp
-        </a>
     </div>
-    <img src="foto-abogada.jpg" alt="Abogada María Alejandra Parra" class="header-photo">
+    <img src="foto-abogada.jpg" alt="Abogada Mariale" class="header-photo">
 </header>
 
 <div class="container">
@@ -126,22 +134,30 @@
         <div class="card">
             <span class="icon">⚖️</span>
             <h3>Gestión Legal</h3>
-            <p>Especialista en derecho condominal, redacción de documentos, reglamentos y resolución de conflictos en juntas de condominio.</p>
+            <p>Especialista en derecho condominal, redacción de documentos, reglamentos y resolución de conflictos.</p>
         </div>
 
         <div class="card">
             <span class="icon">📱</span>
             <h3>Cobranza Omnicanal</h3>
-            <p>Sistema automatizado de recordatorios vía WhatsApp, Correo, SMS y Telegram con seguimiento inteligente de mora en tiempo real.</p>
+            <p>Recordatorios automáticos vía WhatsApp, Correo, SMS y Telegram con seguimiento de mora en tiempo real.</p>
         </div>
 
         <div class="card">
             <span class="icon">⚙️</span>
             <h3>Automatización IT</h3>
-            <p>Implementación de software administrativo y flujos de trabajo eficientes para administradoras de alta exigencia.</p>
+            <p>Software administrativo y flujos de trabajo eficientes para administradoras de alta exigencia.</p>
         </div>
     </div>
 </div>
+
+<section class="cta-section">
+    <h2>¿Desea optimizar su gestión hoy mismo?</h2>
+    <p style="margin-bottom: 30px; color: #666;">Hablemos sobre cómo reducir la morosidad y profesionalizar su comunidad.</p>
+    <a href="https://wa.me/584242624559?text=Hola%20Abogada%20Mariale,%20deseo%20información%20sobre%20sus%20servicios" class="btn">
+        Contactar por WhatsApp
+    </a>
+</section>
 
 <footer>
     <p>Desarrollado por Lisbeth Parra Martínez (Asesor IT) &copy; 2026</p>
