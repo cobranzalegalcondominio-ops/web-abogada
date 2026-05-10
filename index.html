@@ -3,117 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abogada María Alejandra Parra | Legal Tech</title>
+    <title>Abogada María Alejandra Parra | Legal & Prop-Tech Solutions</title>
     
     <link rel="preload" as="image" href="foto-abogada.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            /* PALETA MÁS BRILLANTE Y LIGERA */
-            --primary: #3A3F44;    /* Gris Espacial Moderno */
-            --accent: #007AFF;     /* Azul Brillante para detalles */
-            --secondary: #00A86B;  /* Verde WhatsApp */
-            --light: #FFFFFF;      /* Blanco Puro para más luz */
-            --bg-body: #F2F4F7;    /* Gris muy claro de fondo */
+            --primary: #1A1C1E;    
+            --accent: #007AFF;     
+            --tech: #6366F1;       /* Morado Tech para el sistema */
+            --secondary: #00A86B;  
+            --bg-body: #F8FAFC;    
+            --white: #FFFFFF;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-body); color: #1E293B; line-height: 1.6; }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-body);
-            color: #2D3436;
-        }
-
-        /* Banner Superior más ligero */
+        /* Hero Moderno */
         header {
-            background: linear-gradient(135deg, var(--primary) 0%, #545B62 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, #334155 100%);
             color: white;
-            padding: 50px 20px;
+            padding: 100px 20px;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 40px;
+            gap: 50px;
         }
 
-        .header-text { max-width: 550px; }
-        header h1 { font-size: 2.3rem; margin-bottom: 12px; font-weight: 700; letter-spacing: -0.5px; }
-        header p { font-size: 1.1rem; opacity: 0.95; line-height: 1.4; }
+        .header-text { max-width: 600px; }
+        header h1 { font-size: 3rem; margin-bottom: 20px; font-weight: 700; line-height: 1.1; }
+        header p { font-size: 1.2rem; opacity: 0.9; margin-bottom: 30px; }
 
-        /* Contenedor de foto con "Brillo" */
         .photo-container {
-            width: 300px;
-            height: 380px;
-            background: #444; /* Fondo mientras carga */
-            border-radius: 20px;
+            width: 320px;
+            height: 420px;
+            border-radius: 30px;
             overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-            border: 4px solid rgba(255,255,255,0.1);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+            border: 2px solid rgba(255,255,255,0.1);
         }
+        .header-photo { width: 100%; height: 100%; object-fit: cover; }
 
-        .header-photo {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .container { max-width: 1100px; margin: 0 auto; padding: 80px 20px; }
+
+        /* Sección del Sistema Administrativo */
+        .tech-highlight {
+            background: linear-gradient(rgba(99, 102, 241, 0.05), rgba(99, 102, 241, 0.1));
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 32px;
+            padding: 50px;
+            margin-bottom: 80px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
         }
+        .tech-content { flex: 1; min-width: 300px; }
+        .tech-tag { background: var(--tech); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; margin-bottom: 15px; display: inline-block; }
+        .tech-highlight h2 { font-size: 2.2rem; margin-bottom: 15px; color: var(--primary); }
 
-        /* Tarjetas con más aire */
-        .container { max-width: 1100px; margin: -30px auto 40px; padding: 0 20px; }
-        
+        /* Grid de Servicios */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
         }
-
         .card {
             background: white;
-            padding: 45px 35px;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            text-align: center;
-            transition: all 0.3s ease;
-            border-top: 5px solid var(--accent); /* Detalle azul brillante */
+            padding: 45px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            transition: 0.4s;
+            position: relative;
+            overflow: hidden;
         }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+        .card::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: var(--accent); }
+        .tech-card::before { background: var(--tech); }
 
-        .card:hover { transform: translateY(-8px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
-        .card h3 { color: var(--primary); margin-bottom: 15px; font-size: 1.3rem; }
-        .icon { font-size: 2.8rem; margin-bottom: 15px; display: block; }
+        .icon { font-size: 3rem; margin-bottom: 20px; display: block; }
+        .card h3 { font-size: 1.5rem; margin-bottom: 15px; }
 
-        /* Sección Final */
-        .cta-section { 
-            text-align: center; 
-            padding: 80px 20px; 
-            background: white;
-            margin-top: 20px;
-        }
-
-        .cta-section h2 { color: var(--primary); font-size: 2rem; margin-bottom: 15px; }
-
-        .btn {
-            background-color: var(--secondary);
+        /* CTA WhatsApp */
+        .cta-box {
+            background: var(--secondary);
             color: white;
-            padding: 18px 40px;
-            text-decoration: none;
-            border-radius: 12px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            display: inline-block;
-            transition: 0.3s;
-            box-shadow: 0 8px 20px rgba(0,168,107,0.3);
+            padding: 60px;
+            border-radius: 32px;
+            text-align: center;
+            margin-top: 50px;
         }
+        .btn-ws {
+            background: white;
+            color: var(--secondary);
+            padding: 20px 50px;
+            border-radius: 16px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.2rem;
+            display: inline-block;
+            margin-top: 25px;
+            transition: 0.3s;
+        }
+        .btn-ws:hover { transform: scale(1.05); box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
 
-        .btn:hover { background-color: #008f5a; transform: scale(1.03); }
-
-        footer { text-align: center; padding: 40px; font-size: 0.85rem; color: #636E72; }
+        footer { text-align: center; padding: 60px; color: #64748B; font-size: 0.9rem; }
 
         @media (max-width: 768px) {
-            header { padding: 40px 20px; text-align: center; }
-            .header-text { text-align: center; }
-            .photo-container { width: 240px; height: 300px; margin: 0 auto; }
-            .container { margin-top: 20px; }
+            header h1 { font-size: 2.2rem; }
+            .tech-highlight { padding: 30px; text-align: center; }
         }
     </style>
 </head>
@@ -121,43 +122,67 @@
 
 <header>
     <div class="header-text">
-        <h1>Abogada María Alejandra Parra</h1>
-        <p>Asesoría Jurídica Integral y Soluciones Tecnológicas para Condominios y Administradoras.</p>
+        <h1>Transformamos la Gestión de su Condominio con Tecnología Legal</h1>
+        <p>Soluciones integrales de cobranza omnicanal, automatización de procesos y el sistema administrativo más robusto para administradoras en Caracas.</p>
+        <a href="https://wa.me/584242624559?text=Hola%20Abogada%20Mariale,%20me%20interesa%20el%20sistema%20y%20cobranza" class="btn-ws" style="color: var(--accent);">Ver Demo del Sistema</a>
     </div>
     <div class="photo-container">
-        <img src="foto-abogada.jpg" alt="Abogada Mariale" class="header-photo" fetchpriority="high">
+        <img src="foto-abogada.jpg" alt="Abogada María Alejandra Parra" class="header-photo">
     </div>
 </header>
 
 <div class="container">
+    
+    <!-- Sección Destacada del Sistema -->
+    <div class="tech-highlight">
+        <div class="tech-content">
+            <span class="tech-tag">Exclusivo para Administradoras</span>
+            <h2>Sistema Administrativo Integral</h2>
+            <p>Hemos desarrollado una plataforma 360° diseñada específicamente para las necesidades del mercado inmobiliario venezolano. Controle finanzas, reportes y comunicación en un solo lugar.</p>
+            <ul style="margin: 20px 0; list-style: none;">
+                <li>✅ Conciliación bancaria automatizada</li>
+                <li>✅ Generación de recibos digitales instantáneos</li>
+                <li>✅ Reportes de gestión para juntas en tiempo real</li>
+            </ul>
+        </div>
+        <div class="icon" style="font-size: 8rem; opacity: 0.2;">💻</div>
+    </div>
+
     <div class="services-grid">
+        <!-- Servicio 1 -->
+        <div class="card tech-card">
+            <span class="icon">📲</span>
+            <h3>Cobranza Omnicanal</h3>
+            <p>Automatice el seguimiento de mora a través de <strong>WhatsApp, Correo,SMS y Telegram</strong>. Nuestra tecnología contacta al copropietario de forma profesional, aumentando la recaudación hasta en un 40%.</p>
+        </div>
+
+        <!-- Servicio 2 -->
         <div class="card">
             <span class="icon">⚖️</span>
-            <h3>Gestión Legal</h3>
-            <p>Especialista en derecho condominal, redacción de documentos y resolución de conflictos.</p>
+            <h3>Blindaje Jurídico</h3>
+            <p>Especialista en Derecho Condominal para la redacción de actas, reglamentos y mediación en asambleas. Resolvemos conflictos con base en la Ley de Propiedad Horizontal.</p>
         </div>
-        <div class="card">
-            <span class="icon">📱</span>
-            <h3>Cobranza Omnicanal</h3>
-            <p>Sistemas automatizados vía WhatsApp y Telegram con seguimiento de mora inteligente.</p>
-        </div>
-        <div class="card">
+
+        <!-- Servicio 3 -->
+        <div class="card tech-card">
             <span class="icon">⚙️</span>
             <h3>Automatización IT</h3>
-            <p>Flujos de trabajo eficientes para administradoras impulsados por tecnología.</p>
+            <p>Auditamos sus flujos de trabajo actuales y los transformamos mediante integraciones tecnológicas para eliminar el error humano y optimizar su tiempo.</p>
         </div>
     </div>
+
+    <!-- CTA Final -->
+    <div class="cta-box">
+        <h2>¿Listo para dar el salto tecnológico?</h2>
+        <p>Hablemos sobre cómo reducir la morosidad y profesionalizar su administración hoy mismo.</p>
+        <a href="https://wa.me/584242624559?text=Hola%20Abogada%20Mariale,%20quiero%20optimizar%20mi%20condominio" class="btn-ws">Solicitar Diagnóstico Gratuito</a>
+    </div>
+
 </div>
 
-<section class="cta-section">
-    <h2>¿Desea optimizar su gestión hoy mismo?</h2>
-    <p style="margin-bottom: 30px; color: #636E72;">Hablemos sobre cómo reducir la morosidad y profesionalizar su comunidad.</p>
-    <a href="https://wa.me/584242624559?text=Hola%20Abogada%20Mariale" class="btn">Contactar por WhatsApp</a>
-</section>
-
 <footer>
-    <p>Desarrollado por Lisbeth Parra Martínez (Asesor IT) &copy; 2026</p>
-    <p>Venezuela - | Caracas</p>
+    <p><strong>Abogada María Alejandra Parra</strong> | Caracas, Venezuela</p>
+    <p>Tecnología impulsada por Lisbeth Parra Martínez (Asesor IT) &copy; 2026</p>
 </footer>
 
 </body>
