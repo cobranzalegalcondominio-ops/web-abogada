@@ -54,10 +54,8 @@
         }
         .header-photo { width: 100%; height: 100%; object-fit: cover; }
 
-        /* Contenedor y Secciones */
         .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
 
-        /* Highlight IT */
         .tech-highlight {
             background: linear-gradient(rgba(99, 102, 241, 0.05), rgba(99, 102, 241, 0.1));
             border: 1px solid rgba(99, 102, 241, 0.2);
@@ -75,7 +73,6 @@
             text-transform: uppercase; margin-bottom: 15px; display: inline-block; 
         }
 
-        /* Cards de Servicios con Borde Superior de Color */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -137,7 +134,9 @@
             border-radius: 12px;
             text-decoration: none;
             font-weight: 600;
+            display: inline-block;
             transition: all 0.4s ease;
+            text-align: center;
         }
 
         .btn-sys:hover {
@@ -148,7 +147,7 @@
         }
 
         .cta-box .btn-ws:hover {
-            background: var(--primary); /* Resalta más sobre el fondo verde */
+            background: var(--primary); 
             color: white;
             border-color: var(--primary);
         }
@@ -174,7 +173,6 @@
             transform: rotate(360deg) scale(1.1);
         }
 
-        /* Video y Testimonios */
         .video-wrapper {
             position: relative;
             padding-bottom: 56.25%;
@@ -235,7 +233,7 @@
         <p>Especialista en Derecho Condominal y Prop-Tech. Optimizamos su recaudación mediante cobranza omnicanal y blindaje jurídico profesional en Caracas.</p>
         <div class="header-btns">
             <a href="https://wa.me/584242624559?text=Hola%20Abogada%20Mariale" class="btn-ws">Solicitar Diagnóstico Gratuito</a>
-            <a href="#" class="btn-sys" style="pointer-events: none; opacity: 0.7;">Acceso al Sistema</a>
+            <a href="https://wa.me/584242624559?text=Hola,%20deseo%20acceder%20al%20sistema" class="btn-sys">Acceso al Sistema</a>
         </div>
     </div>
     <div class="photo-container">
