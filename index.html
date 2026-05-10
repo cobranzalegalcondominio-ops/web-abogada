@@ -3,28 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abogada María Alejandra Parra | Legal Tech & Condominios</title>
+    <title>Abogada María Alejandra Parra | Legal Tech</title>
+    
+    <link rel="preload" as="image" href="foto-abogada.jpg">
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* PALETA ROYAL / STEEL BLUE */
-            --primary: #1E4072;    /* Royal Blue: Profesional y profundo */
-            --accent: #4682B4;     /* Steel Blue: Moderno y tecnológico */
-            --secondary: #00A86B;  /* Verde WhatsApp */
+            --primary: #1E4072;
+            --accent: #4682B4;
+            --secondary: #00A86B;
             --light: #F8F9FA;
-            --dark: #1A1A1A;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
             font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
             background-color: var(--light);
+            color: #1A1A1A;
         }
 
-        /* Hero Section - Banner Superior */
+        /* Hero Section Optimizado */
         header {
             background-color: var(--primary);
             color: white;
@@ -34,27 +34,34 @@
             justify-content: center;
             flex-wrap: wrap;
             gap: 40px;
-            text-align: left;
         }
 
         .header-text { max-width: 600px; }
         header h1 { font-size: 2.5rem; margin-bottom: 10px; }
         header p { font-size: 1.2rem; opacity: 0.9; }
 
-        .header-photo {
-            max-width: 320px;
+        /* CONTENEDOR DE FOTO: Evita el salto visual */
+        .photo-container {
+            width: 320px;
+            height: 400px; /* Ajusta según la proporción de tu imagen */
+            background-color: rgba(255,255,255,0.05); /* Color de carga */
             border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ajusta la foto sin deformarla */
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            border: 3px solid rgba(255,255,255,0.2);
+            border: 3px solid rgba(255,255,255,0.1);
         }
 
-        /* Contenedor de Servicios */
-        .container {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
+        /* Tarjetas de Servicios */
+        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -67,34 +74,14 @@
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             text-align: center;
-            transition: transform 0.3s ease;
-            border-bottom: 4px solid var(--accent); /* Detalle en Steel Blue */
+            border-bottom: 4px solid var(--accent);
         }
 
-        .card:hover { transform: translateY(-10px); }
-        .card h3 { color: var(--primary); margin-bottom: 15px; font-size: 1.4rem; }
-        .card p { font-size: 0.95rem; color: #666; }
-        .icon { 
-            font-size: 2.5rem; 
-            margin-bottom: 20px; 
-            display: block;
-            color: var(--accent);
-        }
+        .card h3 { color: var(--primary); margin-bottom: 15px; }
+        .icon { font-size: 2.5rem; margin-bottom: 20px; display: block; }
 
-        /* Sección de Cierre y WhatsApp */
-        .cta-section {
-            text-align: center;
-            padding: 80px 20px;
-            background-color: white;
-            border-top: 1px solid #eee;
-        }
-
-        .cta-section h2 { 
-            color: var(--primary); 
-            font-size: 2rem; 
-            margin-bottom: 15px; 
-        }
-
+        /* Botón WhatsApp */
+        .cta-section { text-align: center; padding: 60px 20px; background: white; }
         .btn {
             background-color: var(--secondary);
             color: white;
@@ -102,30 +89,13 @@
             text-decoration: none;
             border-radius: 8px;
             font-weight: bold;
-            font-size: 1.1rem;
             display: inline-block;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,168,107,0.3);
-        }
-
-        .btn:hover {
-            background-color: #008f5a;
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(0,168,107,0.4);
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px;
-            font-size: 0.8rem;
-            color: #888;
+            transition: 0.3s;
         }
 
         @media (max-width: 768px) {
             header { flex-direction: column; text-align: center; }
-            .header-text { text-align: center; }
-            header h1 { font-size: 1.8rem; }
-            .header-photo { max-width: 250px; }
+            .photo-container { width: 250px; height: 310px; }
         }
     </style>
 </head>
@@ -136,7 +106,10 @@
         <h1>Abogada María Alejandra Parra</h1>
         <p>Asesoría Jurídica Integral y Soluciones Tecnológicas para Condominios y Administradoras.</p>
     </div>
-    <img src="foto-abogada.jpg" alt="Abogada Mariale" class="header-photo">
+    
+    <div class="photo-container">
+        <img src="foto-abogada.jpg" alt="Abogada Mariale" class="header-photo" fetchpriority="high">
+    </div>
 </header>
 
 <div class="container">
@@ -144,19 +117,17 @@
         <div class="card">
             <span class="icon">⚖️</span>
             <h3>Gestión Legal</h3>
-            <p>Especialista en derecho condominal, redacción de documentos, reglamentos y resolución de conflictos.</p>
+            <p>Especialista en derecho condominal, redacción de documentos y reglamentos.</p>
         </div>
-
         <div class="card">
             <span class="icon">📱</span>
             <h3>Cobranza Omnicanal</h3>
-            <p>Recordatorios automáticos vía WhatsApp, Correo, SMS y Telegram con seguimiento de mora en tiempo real.</p>
+            <p>Recordatorios automáticos vía WhatsApp, Correo y Telegram integrados con n8n.</p>
         </div>
-
         <div class="card">
             <span class="icon">⚙️</span>
             <h3>Automatización IT</h3>
-            <p>Software administrativo y flujos de trabajo eficientes para administradoras de alta exigencia.</p>
+            <p>Optimización de flujos administrativos para juntas de condominio de alta exigencia.</p>
         </div>
     </div>
 </div>
@@ -164,9 +135,7 @@
 <section class="cta-section">
     <h2>¿Desea optimizar su gestión hoy mismo?</h2>
     <p style="margin-bottom: 30px; color: #666;">Hablemos sobre cómo reducir la morosidad y profesionalizar su comunidad.</p>
-    <a href="https://wa.me/584242624559?text=Hola%20Abogada%20Mariale,%20deseo%20información%20sobre%20sus%20servicios" class="btn">
-        Contactar por WhatsApp
-    </a>
+    <a href="https://wa.me/584242624559?text=Hola%20Abogada%20Mariale" class="btn">Contactar por WhatsApp</a>
 </section>
 
 <footer>
