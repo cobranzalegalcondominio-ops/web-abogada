@@ -5,23 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abogada María Alejandra Parra | Legal & Prop-Tech</title>
     
-    <!-- Optimización: Precarga de imagen principal para mejorar el LCP -->
     <link rel="preload" as="image" href="foto-abogada.jpg">
-    <!-- Importación de tipografía moderna Inter desde Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     
     <style>
-        /* Variables Globales */
         :root {
             --primary: #1A1C1E;    
             --accent: #007AFF;     
             --tech: #6366F1;       
             --secondary: #00A86B;  
+            --instagram: #E1306C; /* Color corporativo Instagram */
             --bg-body: #F8FAFC;    
             --white: #FFFFFF;
         }
 
-        /* Reseteo básico */
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { 
             font-family: 'Inter', sans-serif; 
@@ -30,7 +27,6 @@
             line-height: 1.6; 
         }
 
-        /* Hero / Encabezado */
         header {
             background: linear-gradient(135deg, var(--primary) 0%, #334155 100%);
             color: white;
@@ -64,7 +60,6 @@
 
         .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
 
-        /* Sección Tech-Highlight */
         .tech-highlight {
             background: linear-gradient(rgba(99, 102, 241, 0.05), rgba(99, 102, 241, 0.1));
             border: 1px solid rgba(99, 102, 241, 0.2);
@@ -89,7 +84,6 @@
             display: inline-block; 
         }
 
-        /* Grid de Servicios */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -111,7 +105,6 @@
 
         .icon { font-size: 3rem; margin-bottom: 20px; display: block; }
 
-        /* Video responsivo */
         .video-wrapper {
             position: relative;
             padding-bottom: 56.25%;
@@ -127,7 +120,6 @@
             border: none;
         }
 
-        /* Testimonios Reales */
         .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -149,23 +141,9 @@
             position: absolute; top: 10px; left: 20px; font-size: 5rem;
             color: var(--tech); opacity: 0.15; font-family: serif;
         }
-        .testimonial-text { 
-            font-style: italic; 
-            color: #475569; 
-            margin-bottom: 20px; 
-            font-size: 0.95rem;
-            position: relative;
-            z-index: 1;
-        }
-        .testimonial-author { 
-            font-weight: 700; 
-            color: var(--primary); 
-            display: block;
-            border-top: 1px solid #F1F5F9;
-            padding-top: 15px;
-        }
+        .testimonial-text { font-style: italic; color: #475569; margin-bottom: 20px; font-size: 0.95rem; position: relative; z-index: 1; }
+        .testimonial-author { font-weight: 700; color: var(--primary); display: block; border-top: 1px solid #F1F5F9; padding-top: 15px; }
 
-        /* Botón Flotante WhatsApp */
         .whatsapp-float {
             position: fixed;
             bottom: 30px;
@@ -182,11 +160,10 @@
         }
         .whatsapp-float:hover { transform: scale(1.1); }
 
-        /* Botones Generales */
         .btn-ws {
             background: white;
             color: var(--secondary);
-            padding: 18px 45px;
+            padding: 18px 35px;
             border-radius: 16px;
             text-decoration: none;
             font-weight: 800;
@@ -198,6 +175,21 @@
         }
         .btn-ws:hover { opacity: 0.9; transform: translateY(-2px); }
 
+        .btn-ig {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 18px 35px;
+            border-radius: 16px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+        }
+        .btn-ig:hover { background: var(--instagram); border-color: var(--instagram); }
+
         .cta-box {
             background: var(--secondary);
             color: white;
@@ -208,6 +200,9 @@
         }
 
         footer { text-align: center; padding: 60px; color: #64748B; font-size: 0.9rem; }
+        .footer-social { margin-top: 15px; font-size: 1.5rem; }
+        .footer-social a { color: #64748B; text-decoration: none; transition: 0.3s; }
+        .footer-social a:hover { color: var(--instagram); }
     </style>
 </head>
 <body>
@@ -217,14 +212,14 @@
 <header>
     <div class="header-text">
         <h1>Recupere la solvencia de su Condominio con Tecnología Legal</h1>
-        <p>Especialista en Derecho Condominal y Prop-Tech. Optimizamos su recaudación mediante cobranza omnicanal y blindaje jurídico profesional en Caracas.</p>
+        <p>Especialista en Derecho Condominal y Prop-Tech en Caracas. Cobranza omnicanal y blindaje jurídico profesional.</p>
         
         <div class="header-btns">
             <a href="https://wa.me/584242624559?text=Hola%20Abogada%20Mariale,%20necesito%20un%20diagnóstico%20de%20mi%20condominio" class="btn-ws">
-                Solicitar Diagnóstico Gratuito
+                Diagnóstico Gratuito
             </a>
-            <a href="TU_LINK_DEL_SISTEMA_AQUI" class="btn-ws" style="background-color: transparent; border: 2px solid white; color: white;">
-                Acceso al Sistema
+            <a href="https://www.instagram.com/marialeparramartinez?igsh=MzNobGJndGxvY2d1" target="_blank" class="btn-ig">
+                Sígueme en Instagram
             </a>
         </div>
     </div>
@@ -239,7 +234,7 @@
         <div class="tech-content">
             <span class="tech-tag">Exclusivo para Administradoras</span>
             <h2>Sistema Administrativo Integral</h2>
-            <p>Control de finanzas y comunicación en un solo lugar con nuestra plataforma 360°.</p>
+            <p>Hemos desarrollado una plataforma diseñada específicamente para las necesidades del mercado inmobiliario venezolano.</p>
             <ul style="margin: 20px 0; list-style: none;">
                 <li>✅ Conciliación bancaria automatizada</li>
                 <li>✅ Generación de recibos digitales instantáneos</li>
@@ -253,19 +248,19 @@
         <div class="card tech-card">
             <span class="icon">📲</span>
             <h3>Cobranza Omnicanal</h3>
-            <p>Automatice el seguimiento de mora a través de <strong>WhatsApp y Correo</strong>. Aumente la recaudación hasta en un 40%.</p>
+            <p>Automatice el seguimiento de mora a través de WhatsApp y Correo para aumentar su recaudación.</p>
         </div>
 
         <div class="card">
             <span class="icon">⚖️</span>
             <h3>Blindaje Jurídico</h3>
-            <p>Redacción de actas y mediación profesional bajo la Ley de Propiedad Horizontal.</p>
+            <p>Asesoría especializada en la Ley de Propiedad Horizontal y gestión de asambleas.</p>
         </div>
 
         <div class="card tech-card">
             <span class="icon">⚙️</span>
             <h3>Automatización IT</h3>
-            <p>Transformamos sus flujos de trabajo actuales eliminando el error humano mediante tecnología.</p>
+            <p>Transformamos sus flujos de trabajo mediante integraciones tecnológicas para optimizar su tiempo.</p>
         </div>
     </div>
 
@@ -276,35 +271,21 @@
         </div>
     </section>
 
-    <!-- SECCIÓN TESTIMONIOS REALES -->
     <section>
         <h2 style="text-align: center;">Lo que dicen nuestras comunidades</h2>
         <div class="testimonials-grid">
-            
-            <!-- Testimonio Edificio Valle Verde -->
             <div class="testimonial-card">
-                <p class="testimonial-text">
-                    "Agradezco a Dios haberlos conocido para presentarlos ante semejante audiencia... me siento con mucha mejor energía ante la comunidad. No se esperaron semejante exposición."
-                </p>
-                <span class="testimonial-author">Junta de Condominio, Edificio Valle Verde</span>
+                <p class="testimonial-text">"Agradezco a Dios haberlos conocido... me siento con mucha mejor energía ante la comunidad. No se esperaron semejante exposición."</p>
+                <span class="testimonial-author">Edificio Valle Verde</span>
             </div>
-
-            <!-- Testimonio Edificio Suerte -->
             <div class="testimonial-card">
-                <p class="testimonial-text">
-                    "Anexo pago total de deuda más honorarios. Gracias Dra. Mariale por tu profesionalismo y educación en la gestión de la deuda."
-                </p>
-                <span class="testimonial-author">Copropietario, Edificio Suerte</span>
+                <p class="testimonial-text">"Gracias Dra. Mariale por tu profesionalismo y educación en la gestión de la deuda. Anexo pago total."</p>
+                <span class="testimonial-author">Edificio Suerte</span>
             </div>
-
-            <!-- Testimonio Edificio Tiniquijina -->
             <div class="testimonial-card">
-                <p class="testimonial-text">
-                    "Gracias Dra. Mariale, todo el reconocimiento se lo lleva usted. Nos encantó su profesionalismo y su forma de ser."
-                </p>
-                <span class="testimonial-author">Administración, Edificio Tiniquijina</span>
+                <p class="testimonial-text">"Nos encantó su profesionalismo y su forma de ser. Todo el reconocimiento se lo lleva usted."</p>
+                <span class="testimonial-author">Edificio Tiniquijina</span>
             </div>
-
         </div>
     </section>
 
@@ -318,7 +299,10 @@
 
 <footer>
     <p><strong>Abogada María Alejandra Parra</strong> | Caracas, Venezuela</p>
-    <p>Tecnología: Lisbeth Parra Martínez (Asesor IT) &copy; 2026</p>
+    <div class="footer-social">
+        <a href="https://www.instagram.com/marialeparramartinez?igsh=MzNobGJndGxvY2d1" target="_blank" title="Instagram">📸</a>
+    </div>
+    <p style="margin-top: 10px;">Tecnología: Lisbeth Parra Martínez (Asesor IT) &copy; 2026</p>
 </footer>
 
 </body>
