@@ -21,7 +21,7 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Inter', sans-serif; background-color: var(--bg-body); color: #1E293B; line-height: 1.6; }
 
-        /* Hero */
+        /* Hero / Encabezado */
         header {
             background: linear-gradient(135deg, var(--primary) 0%, #334155 100%);
             color: white;
@@ -35,7 +35,14 @@
 
         .header-text { max-width: 600px; }
         header h1 { font-size: 3rem; margin-bottom: 20px; font-weight: 700; line-height: 1.1; }
-        header p { font-size: 1.2rem; opacity: 0.9; margin-bottom: 30px; }
+        header p { font-size: 1.2rem; opacity: 0.9; margin-bottom: 35px; }
+
+        /* Contenedor de botones del Header */
+        .header-btns {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
 
         .photo-container {
             width: 320px;
@@ -143,14 +150,7 @@
         }
         .whatsapp-float:hover { transform: scale(1.1); }
 
-        .cta-box {
-            background: var(--secondary);
-            color: white;
-            padding: 60px;
-            border-radius: 32px;
-            text-align: center;
-            margin-top: 50px;
-        }
+        /* Botones Generales */
         .btn-ws {
             background: white;
             color: var(--secondary);
@@ -159,8 +159,20 @@
             text-decoration: none;
             font-weight: 800;
             display: inline-block;
-            margin-top: 25px;
             transition: 0.3s;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+        .btn-ws:hover { opacity: 0.9; transform: translateY(-2px); }
+
+        .cta-box {
+            background: var(--secondary);
+            color: white;
+            padding: 60px;
+            border-radius: 32px;
+            text-align: center;
+            margin-top: 50px;
         }
 
         footer { text-align: center; padding: 60px; color: #64748B; font-size: 0.9rem; }
@@ -172,9 +184,21 @@
 
 <header>
     <div class="header-text">
-        <h1>Transformamos la Gestión de su Condominio con Tecnología Legal</h1>
-        <p>Soluciones integrales de cobranza omnicanal, automatización de procesos y el sistema administrativo más robusto para administradoras en Caracas.</p>
-        <a href="https://wa.me/584242624559?text=Hola%20Abogada%20Mariale,%20quiero%20ver%20la%20demo" class="btn-ws" style="color: var(--accent);">Ver Demo del Sistema</a>
+        <!-- Título con enfoque en resultados (Ajustado) -->
+        <h1>Recupere la solvencia de su Condominio con Tecnología Legal</h1>
+        <p>Especialista en Derecho Condominal y Prop-Tech. Optimizamos su recaudación mediante cobranza omnicanal y blindaje jurídico profesional en Caracas.</p>
+        
+        <div class="header-btns">
+            <!-- Acción de Venta (Principal) -->
+            <a href="https://wa.me/584242624559?text=Hola%20Abogada%20Mariale,%20necesito%20un%20diagnóstico%20de%20mi%20condominio" class="btn-ws">
+                Solicitar Diagnóstico Gratuito
+            </a>
+            
+            <!-- Acceso Técnico (Estilo secundario/Ghost) -->
+            <a href="TU_LINK_DEL_SISTEMA_AQUI" class="btn-ws" style="background-color: transparent; border: 2px solid white; color: white;">
+                Acceso al Sistema
+            </a>
+        </div>
     </div>
     <div class="photo-container">
         <img src="foto-abogada.jpg" alt="Abogada María Alejandra Parra" class="header-photo">
@@ -198,23 +222,20 @@
         <div class="icon" style="font-size: 8rem; opacity: 0.1;">💻</div>
     </div>
 
-    <!-- BLOQUE DE SERVICIOS RECUPERADO -->
+    <!-- BLOQUE DE SERVICIOS -->
     <div class="services-grid">
-        <!-- Servicio 1 -->
         <div class="card tech-card">
             <span class="icon">📲</span>
             <h3>Cobranza Omnicanal</h3>
             <p>Automatice el seguimiento de mora a través de <strong>WhatsApp, Correo, SMS y Telegram</strong>. Nuestra tecnología contacta al copropietario de forma profesional, aumentando la recaudación hasta en un 40%.</p>
         </div>
 
-        <!-- Servicio 2 -->
         <div class="card">
             <span class="icon">⚖️</span>
             <h3>Blindaje Jurídico</h3>
             <p>Especialista en Derecho Condominal para la redacción de actas, reglamentos y mediación en asambleas. Resolvemos conflictos con base en la Ley de Propiedad Horizontal.</p>
         </div>
 
-        <!-- Servicio 3 -->
         <div class="card tech-card">
             <span class="icon">⚙️</span>
             <h3>Automatización IT</h3>
@@ -222,7 +243,7 @@
         </div>
     </div>
 
-    <!-- SECCIÓN DE VIDEO ACTUALIZADA -->
+    <!-- SECCIÓN DE VIDEO -->
     <section>
         <h2 style="text-align: center; margin-bottom: 20px;">Vea nuestra tecnología en acción</h2>
         <div class="video-wrapper">
@@ -252,7 +273,7 @@
     <div class="cta-box">
         <h2>¿Listo para profesionalizar su comunidad?</h2>
         <p>Hablemos sobre cómo optimizar su administración hoy mismo.</p>
-        <a href="https://wa.me/584242624559?text=Hola%20Abogada%20Mariale,%20necesito%20un%20diagnóstico" class="btn-ws">Solicitar Diagnóstico Gratuito</a>
+        <a href="https://wa.me/584242624559?text=Hola%20Abogada%20Mariale,%20necesito%20un%20diagnóstico" class="btn-ws" style="margin-top: 25px;">Solicitar Diagnóstico Gratuito</a>
     </div>
 
 </div>
@@ -264,3 +285,4 @@
 
 </body>
 </html>
+       
