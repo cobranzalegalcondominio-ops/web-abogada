@@ -14,7 +14,7 @@
             --accent: #007AFF;     
             --tech: #6366F1;       
             --secondary: #00A86B;  
-            --instagram: #E1306C; /* Color corporativo Instagram */
+            --instagram: #E1306C;
             --bg-body: #F8FAFC;    
             --white: #FFFFFF;
         }
@@ -199,10 +199,26 @@
             margin-top: 50px;
         }
 
-        footer { text-align: center; padding: 60px; color: #64748B; font-size: 0.9rem; }
-        .footer-social { margin-top: 15px; font-size: 1.5rem; }
-        .footer-social a { color: #64748B; text-decoration: none; transition: 0.3s; }
-        .footer-social a:hover { color: var(--instagram); }
+        /* Ajustes de Pie de Página */
+        footer { text-align: center; padding: 60px; color: #64748B; font-size: 0.95rem; }
+        
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+
+        .instagram-link {
+            font-size: 1.8rem;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+        .instagram-link:hover { transform: scale(1.2); }
+
+        .footer-tech { font-size: 0.85rem; opacity: 0.8; margin-top: 5px; }
     </style>
 </head>
 <body>
@@ -215,7 +231,7 @@
         <p>Especialista en Derecho Condominal y Prop-Tech en Caracas. Cobranza omnicanal y blindaje jurídico profesional.</p>
         
         <div class="header-btns">
-            <a href="https://wa.me/584242624559?text=Hola%20Abogada%20Mariale,%20necesito%20un%20diagnóstico%20de%20mi%20condominio" class="btn-ws">
+            <a href="https://wa.me/584242624559?text=Hola%20Abogada%20Mariale,%20necesito%20un%20diagnóstico" class="btn-ws">
                 Diagnóstico Gratuito
             </a>
             <a href="https://www.instagram.com/marialeparramartinez?igsh=MzNobGJndGxvY2d1" target="_blank" class="btn-ig">
@@ -234,7 +250,7 @@
         <div class="tech-content">
             <span class="tech-tag">Exclusivo para Administradoras</span>
             <h2>Sistema Administrativo Integral</h2>
-            <p>Hemos desarrollado una plataforma diseñada específicamente para las necesidades del mercado inmobiliario venezolano.</p>
+            <p>Plataforma diseñada específicamente para las necesidades del mercado inmobiliario venezolano.</p>
             <ul style="margin: 20px 0; list-style: none;">
                 <li>✅ Conciliación bancaria automatizada</li>
                 <li>✅ Generación de recibos digitales instantáneos</li>
@@ -248,31 +264,22 @@
         <div class="card tech-card">
             <span class="icon">📲</span>
             <h3>Cobranza Omnicanal</h3>
-            <p>Automatice el seguimiento de mora a través de WhatsApp y Correo para aumentar su recaudación.</p>
+            <p>Automatice el seguimiento de mora a través de WhatsApp y Correo.</p>
         </div>
-
         <div class="card">
             <span class="icon">⚖️</span>
             <h3>Blindaje Jurídico</h3>
-            <p>Asesoría especializada en la Ley de Propiedad Horizontal y gestión de asambleas.</p>
+            <p>Asesoría especializada en la Ley de Propiedad Horizontal.</p>
         </div>
-
         <div class="card tech-card">
             <span class="icon">⚙️</span>
             <h3>Automatización IT</h3>
-            <p>Transformamos sus flujos de trabajo mediante integraciones tecnológicas para optimizar su tiempo.</p>
+            <p>Transformamos sus flujos de trabajo mediante integraciones tecnológicas.</p>
         </div>
     </div>
 
     <section>
-        <h2 style="text-align: center; margin-bottom: 20px;">Vea nuestra tecnología en acción</h2>
-        <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/6oCgFTqCEQc" allowfullscreen title="Video Demostrativo"></iframe>
-        </div>
-    </section>
-
-    <section>
-        <h2 style="text-align: center;">Lo que dicen nuestras comunidades</h2>
+        <h2 style="text-align: center; margin-bottom: 40px;">Lo que dicen nuestras comunidades</h2>
         <div class="testimonials-grid">
             <div class="testimonial-card">
                 <p class="testimonial-text">"Agradezco a Dios haberlos conocido... me siento con mucha mejor energía ante la comunidad. No se esperaron semejante exposición."</p>
@@ -290,20 +297,32 @@
     </section>
 
     <div class="cta-box">
-        <h2>¿Listo para profesionalizar su comunidad?</h2>
-        <p>Hablemos sobre cómo optimizar su administración hoy mismo.</p>
-        <a href="https://wa.me/584242624559?text=Hola%20Abogada%20Mariale,%20necesito%20un%20diagnóstico" class="btn-ws" style="margin-top: 25px;">Solicitar Diagnóstico Gratuito</a>
+        <h2>¿Listo para optimizar su gestión?</h2>
+        <p>Haga clic debajo para ingresar a nuestra plataforma exclusiva.</p>
+        <a href="TU_LINK_DEL_SISTEMA_AQUI" class="btn-ws" style="margin-top: 25px;">
+            Acceso al Sistema Administrativo
+        </a>
     </div>
 
 </div>
 
 <footer>
-    <p><strong>Abogada María Alejandra Parra</strong> | Caracas, Venezuela</p>
-    <div class="footer-social">
-        <a href="https://www.instagram.com/marialeparramartinez?igsh=MzNobGJndGxvY2d1" target="_blank" title="Instagram">📸</a>
+    <div class="footer-brand">
+        <strong>Abogada María Alejandra Parra</strong> 
+        <span>|</span> 
+        <span>Caracas, Venezuela</span>
+        <a href="https://www.instagram.com/marialeparramartinez?igsh=MzNobGJndGxvY2d1" target="_blank" class="instagram-link" title="Sígueme en Instagram">
+            📸
+        </a>
     </div>
-    <p style="margin-top: 10px;">Tecnología: Lisbeth Parra Martínez (Asesor IT) &copy; 2026</p>
+    <p class="footer-tech">Tecnología: Lisbeth Parra Martínez (Asesor IT) &copy; 2026</p>
 </footer>
 
 </body>
-</html>
+</html>    
+         
+         
+        
+   
+            
+
