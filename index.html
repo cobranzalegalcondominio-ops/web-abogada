@@ -24,7 +24,7 @@
         :root {
             --primary: #1A1C1E;    
             --accent: #007AFF;     
-            --tech: #6366F1;       
+            --tech: #6366F1;        
             --secondary: #00A86B;  
             --bg-body: #F8FAFC;    
             --text-muted: #64748B;
@@ -124,10 +124,10 @@
             line-height: 1.6;
         }
 
-        /* --- NUEVO: VIDEO RESPONSIVO --- */
+        /* --- VIDEO RESPONSIVO --- */
         .video-wrapper {
             position: relative;
-            padding-bottom: 56.25%; /* Relación 16:9 */
+            padding-bottom: 56.25%; 
             height: 0;
             overflow: hidden;
             max-width: 100%;
@@ -144,6 +144,58 @@
             height: 100%;
             border: 0;
         }
+
+        /* --- TARJETA ADMINISTRADORA (FORTALEZAS) --- */
+        .admin-strength-card {
+            background: white;
+            border: 4px solid var(--tech);
+            border-radius: 35px;
+            padding: 50px 40px;
+            margin: 40px 0 80px 0;
+            position: relative;
+            box-shadow: 0 25px 60px rgba(99, 102, 241, 0.15);
+        }
+        .admin-label {
+            position: absolute;
+            top: -22px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--tech);
+            color: white;
+            padding: 10px 35px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+        .strength-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .strength-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 20px;
+        }
+        .strength-icon {
+            font-size: 1.5rem;
+            background: white;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .strength-text h4 { color: var(--primary); margin-bottom: 5px; }
+        .strength-text p { font-size: 0.9rem; color: var(--text-muted); }
 
         /* --- CARDS DE SERVICIOS --- */
         .services-grid {
@@ -283,6 +335,42 @@
         </iframe>
     </div>
 
+    <div class="admin-strength-card">
+        <div class="admin-label">Solo para Administradoras</div>
+        <h2 style="text-align: center; color: var(--primary); margin-bottom: 10px;">Fortalezas de nuestro Sistema Administrativo</h2>
+        <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">Tecnología diseñada bajo el rigor de la Ley de Propiedad Horizontal.</p>
+        <div class="strength-grid">
+            <div class="strength-item">
+                <div class="strength-icon">💸</div>
+                <div class="strength-text">
+                    <h4>Multimoneda</h4>
+                    <p>Gestión automatizada en divisas e indexación para proteger el valor del patrimonio.</p>
+                </div>
+            </div>
+            <div class="strength-item">
+                <div class="strength-icon">⚖️</div>
+                <div class="strength-text">
+                    <h4>Apegado a la LPH</h4>
+                    <p>Soportes legales con fuerza de Ley de Propiedad Horizontal en cada proceso.</p>
+                </div>
+            </div>
+            <div class="strength-item">
+                <div class="strength-icon">🔍</div>
+                <div class="strength-text">
+                    <h4>Auditoría Total</h4>
+                    <p>Trazabilidad de cada movimiento para una gestión transparente y sin conflictos.</p>
+                </div>
+            </div>
+            <div class="strength-item">
+                <div class="strength-icon">🏦</div>
+                <div class="strength-text">
+                    <h4>Conciliación Auto</h4>
+                    <p>Sincronización bancaria que elimina el error humano y optimiza el tiempo.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="services-grid">
         <div class="card card-cobranza">
             <i class="fa-solid fa-microchip"></i>
@@ -368,4 +456,4 @@
 
 </body>
 </html>
-          
+       
