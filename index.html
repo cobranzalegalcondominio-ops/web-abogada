@@ -259,8 +259,36 @@
 
         .btn-ws { background: white; color: var(--secondary); padding: 16px 32px; border-radius: 12px; text-decoration: none; font-weight: 700; display: inline-block; transition: all 0.4s ease; text-align: center; border: 2px solid white; }
         .btn-ws:hover { background: var(--fucsia); color: white; border-color: var(--fucsia); transform: scale(1.05); box-shadow: 0 10px 20px rgba(255, 0, 255, 0.3); }
-        .btn-sys { background: transparent; border: 2px solid white; color: white; padding: 16px 32px; border-radius: 12px; text-decoration: none; font-weight: 600; display: inline-block; transition: all 0.4s ease; text-align: center; }
-        .btn-sys:hover { background: var(--fucsia); border-color: var(--fucsia); color: white; transform: scale(1.05); }
+        
+        /* Estilo mejorado para el botón del sistema dentro de la tarjeta */
+        .btn-sys-card { 
+            background: var(--tech); 
+            color: white; 
+            padding: 18px 32px; 
+            border-radius: 14px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: 12px;
+            transition: all 0.4s ease; 
+            text-align: center; 
+            width: 100%;
+            max-width: 450px;
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.25);
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.95rem;
+        }
+        .btn-sys-card:hover { 
+            background: var(--fucsia); 
+            transform: translateY(-3px); 
+            box-shadow: 0 12px 25px rgba(255, 0, 255, 0.3);
+            color: white;
+        }
 
         .cta-box { background: var(--secondary); color: white; padding: 70px 40px; border-radius: 24px; text-align: center; margin: 60px 0; }
 
@@ -279,10 +307,9 @@
         .instagram-link:hover { transform: translateY(-3px); }
         .instagram-link:hover svg { transform: rotate(15deg) scale(1.2); }
 
-        /* --- NUEVAS REGLAS DE ANIMACIÓN --- */
         .reveal {
             opacity: 0;
-            transform: translateY(40px); /* Ajustado para mayor sensación de movimiento */
+            transform: translateY(40px); 
             transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
             will-change: transform, opacity;
         }
@@ -291,7 +318,6 @@
             transform: translateY(0);
         }
 
-        /* Efecto cascada opcional para los testimonios */
         .testimonial-card:nth-child(2) { transition-delay: 0.2s; }
         .testimonial-card:nth-child(3) { transition-delay: 0.4s; }
 
@@ -327,7 +353,6 @@
         <p>Experticia jurídica combinada con herramientas de última generación. Optimizamos la recaudación y el blindaje legal de su condominio con procesos ejecutables en Caracas.</p>
         <div class="header-btns">
             <a href="https://wa.me/584242624559?text=Hola%20Abogada%20Mariale" class="btn-ws">Solicitar Diagnóstico LegalTech</a>
-            <a href="https://soft-ia.com/inicio/inicioxadmin/323533" class="btn-sys" target="_blank">Acceso al Sistema</a>
         </div>
     </div>
     <div class="photo-container">
@@ -388,6 +413,13 @@
                     <h4>Conciliación Auto</h4>
                     <p>Sincronización bancaria veloz.</p>
                 </div>
+            </div>
+
+            <div style="width: 100%; display: flex; justify-content: center; margin-top: 25px; padding: 0 10px;">
+                <a href="https://soft-ia.com/inicio/inicioxadmin/323533" class="btn-sys-card" target="_blank">
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                    Acceso Exclusivo al Sistema
+                </a>
             </div>
         </div>
     </div>
@@ -476,7 +508,6 @@
 </footer>
 
 <script>
-    // Configuración mejorada del Observador para asegurar movimiento
     const observerOptions = {
         threshold: 0.1,
         rootMargin: "0px 0px -50px 0px"
@@ -486,13 +517,11 @@
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                // Dejamos de observar una vez que ya es visible para rendimiento
                 observer.unobserve(entry.target); 
             }
         });
     }, observerOptions);
 
-    // Ejecutar cuando el DOM esté listo
     document.addEventListener("DOMContentLoaded", () => {
         const revealElements = document.querySelectorAll('.reveal');
         revealElements.forEach(el => observer.observe(el));
@@ -501,17 +530,3 @@
 
 </body>
 </html>
-      
-           
-           
-        
-        
-        
-
-      
-            
-      
-
-       
-
-    
