@@ -282,13 +282,19 @@
         /* --- NUEVAS REGLAS DE ANIMACIÓN --- */
         .reveal {
             opacity: 0;
-            transform: translateY(30px);
+            transform: translateY(40px); /* Ajustado para mayor sensación de movimiento */
             transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+            will-change: transform, opacity;
         }
         .reveal.visible {
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Efecto cascada opcional para los testimonios */
+        .testimonial-card:nth-child(2) { transition-delay: 0.2s; }
+        .testimonial-card:nth-child(3) { transition-delay: 0.4s; }
+
         header .header-text, header .photo-container {
             animation: fadeInIntro 1.2s ease-out forwards;
         }
@@ -470,18 +476,42 @@
 </footer>
 
 <script>
-    // Script de Inyección de Animación sutil
+    // Configuración mejorada del Observador para asegurar movimiento
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
+                // Dejamos de observar una vez que ya es visible para rendimiento
+                observer.unobserve(entry.target); 
             }
         });
-    }, { threshold: 0.1 });
+    }, observerOptions);
 
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    // Ejecutar cuando el DOM esté listo
+    document.addEventListener("DOMContentLoaded", () => {
+        const revealElements = document.querySelectorAll('.reveal');
+        revealElements.forEach(el => observer.observe(el));
+    });
 </script>
 
 </body>
 </html>
+      
+           
+           
         
+        
+        
+
+      
+            
+      
+
+       
+
+    
