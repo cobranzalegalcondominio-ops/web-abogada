@@ -3,102 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Abogada María Alejandra Parra | Pionera en LegalTech y Derecho Condominal</title>
-    <meta name="description" content="Líder en LegalTech y Derecho Condominal en Caracas. Cobranza automatizada con fuerza legal, gestión multimoneda y blindaje jurídico para condominios.">
-    <meta name="keywords" content="LegalTech Venezuela, Abogado Condominio Caracas, Cobranza Condominio, Prop-Tech, María Alejandra Parra, Automatización Legal">
-    <meta name="author" content="Lisbeth Parra Martínez">
-    <meta name="robots" content="index, follow">
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://cobranzalegalcondominio-ops.github.io/web-abogada/">
-    <meta property="og:title" content="Abogada María Alejandra Parra | LegalTech & Prop-Tech">
-    <meta property="og:description" content="Transformamos la gestión de su condominio con soluciones legales de alta tecnología y cobranza ejecutable.">
-    <meta property="og:image" content="https://cobranzalegalcondominio-ops.github.io/web-abogada/foto-abogada.jpg">
-
-    <link rel="preload" as="image" href="foto-abogada.jpg">
+    <title>Abogada María Alejandra Parra | LegalTech</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <style>
         :root {
             --primary: #1A1C1E;    
-            --accent: #007AFF;     
             --tech: #6366F1;       
             --secondary: #00A86B;  
             --bg-body: #F8FAFC;    
-            --text-muted: #64748B;
             --fucsia: #FF00FF;
-            --infra: #F59E0B; /* Color ámbar para Infraestructura */
+            --infra: #F59E0B;
             --insta-gradient: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-            --testimonio-bg: #FFFFFF;
-            --testimonio-shadow: rgba(0, 0, 0, 0.05);
-            --testimonio-hover-shadow: rgba(0, 0, 0, 0.1);
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { 
-            font-family: 'Inter', sans-serif; 
-            background-color: var(--bg-body); 
-            color: #1E293B; 
-            line-height: 1.6; 
-        }
-
-        header {
-            background: linear-gradient(135deg, var(--primary) 0%, #334155 100%);
-            color: white;
-            padding: 100px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 50px;
-        }
-        .header-text { max-width: 600px; }
-        header h1 { font-size: 2.8rem; margin-bottom: 20px; font-weight: 700; line-height: 1.1; }
-        header p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 35px; }
-
-        .header-btns { display: flex; gap: 15px; flex-wrap: wrap; }
-        
-        .photo-container {
-            width: 320px;
-            height: 420px;
-            border-radius: 30px;
-            overflow: hidden;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.4);
-        }
-        .header-photo { width: 100%; height: 100%; object-fit: cover; }
-
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-body); color: #1E293B; line-height: 1.6; }
         .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
 
-        .legaltech-banner {
-            background: var(--primary);
-            color: white;
-            padding: 40px;
-            border-radius: 24px;
-            margin-bottom: 60px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            align-items: center;
-        }
-        .lt-item h4 { color: var(--fucsia); margin-bottom: 10px; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
-
-        .comparison-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 80px;
-        }
-        .comp-card { background: #fff; padding: 30px; border-radius: 20px; border: 1px solid #e2e8f0; }
-        .comp-card.featured { border: 2px solid var(--tech); background: #EEF2FF; position: relative; }
-        .comp-tag { position: absolute; top: -15px; right: 20px; background: var(--fucsia); color: white; padding: 4px 12px; border-radius: 10px; font-size: 0.7rem; font-weight: bold; }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 25px;
-            margin-bottom: 80px;
-        }
+        /* --- SERVICIOS --- */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; margin-bottom: 80px; }
         .card {
             background: white; padding: 40px; border-radius: 24px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.03); transition: all 0.3s ease;
@@ -108,258 +32,87 @@
         .card::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 6px; }
         .card-cobranza::before { background: var(--tech); }
         .card-legal::before { background: var(--secondary); }
-        .card-it::before { background: var(--fucsia); }
-        .card-gov::before { background: var(--accent); }
         .card-infra::before { background: var(--infra); }
-
+        .card-it::before { background: var(--fucsia); }
+        .card-gov::before { background: #007AFF; }
         .card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
         .icon { font-size: 2.5rem; margin-bottom: 20px; display: block; }
-        
-        .card h3 { margin-bottom: 15px; }
-        .card-footer-tag { margin-top: auto; padding-top: 15px; font-size: 0.85rem; font-weight: 700; color: var(--text-muted); border-top: 1px solid #f1f5f9; }
 
-        .btn-ws {
-            background: white; color: var(--secondary); padding: 16px 32px;
-            border-radius: 12px; text-decoration: none; font-weight: 700;
-            display: inline-block; transition: all 0.4s ease; text-align: center; border: 2px solid white;
-        }
-        .btn-ws:hover {
-            background: var(--fucsia); color: white; border-color: var(--fucsia);
-            transform: scale(1.05); box-shadow: 0 10px 20px rgba(255, 0, 255, 0.3);
-        }
-        .btn-sys {
-            background: transparent; border: 2px solid white; color: white;
-            padding: 16px 32px; border-radius: 12px; text-decoration: none;
-            font-weight: 600; display: inline-block; transition: all 0.4s ease; text-align: center;
-        }
-        .btn-sys:hover { background: var(--fucsia); border-color: var(--fucsia); color: white; transform: scale(1.05); }
-
-        .whatsapp-float {
-            position: fixed; bottom: 30px; right: 30px;
-            background-color: var(--secondary); color: white;
-            width: 60px; height: 60px; border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 30px; text-decoration: none; box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-            z-index: 1000; transition: all 0.3s ease;
-        }
-        .whatsapp-float:hover { background-color: var(--fucsia); transform: rotate(360deg) scale(1.1); }
-
-        .video-wrapper {
-            position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;
-            border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); margin: 40px 0 80px;
-        }
-        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
-
-        /* Estilos de Testimonios Corregidos */
-        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 40px 0; }
+        /* --- TESTIMONIOS CON MOVIMIENTO --- */
+        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         .testimonial-card { 
-            background: var(--testimonio-bg); 
-            padding: 40px 30px; 
-            border-radius: 20px; 
-            box-shadow: 0 10px 20px var(--testimonio-shadow); 
-            border: 1px solid #edf2f7;
-            transition: all 0.3s ease;
+            background: white; padding: 40px 30px; border-radius: 20px; 
+            border: 1px solid #edf2f7; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             position: relative;
-            overflow: hidden;
         }
+        /* Efecto de borde y sombra con movimiento */
         .testimonial-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px var(--testimonio-hover-shadow);
-            border-color: #f1f5f9;
+            transform: scale(1.02);
+            border-color: var(--tech);
+            box-shadow: 0 15px 30px rgba(99, 102, 241, 0.2);
         }
-        .testimonial-card:hover::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, #334155 0%, var(--primary) 100%);
-            animation: borderSlide 0.5s ease forwards;
-        }
-        @keyframes borderSlide {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-        .testimonial-text { 
-            position: relative;
-            font-size: 1rem;
-            color: #4a5568;
-            margin-bottom: 25px;
-        }
+        .testimonial-text { position: relative; font-style: italic; color: #4a5568; margin-bottom: 20px; z-index: 1; }
+        /* Comillas bonitas grises */
         .testimonial-text::before {
-            content: "\201C"; /* Carácter unicode de comillas de apertura */
-            font-size: 4rem;
-            color: #edf2f7;
-            position: absolute;
-            top: -20px;
-            left: -20px;
-            font-family: serif;
+            content: "\201C"; font-family: serif; font-size: 5rem; color: #e2e8f0;
+            position: absolute; top: -30px; left: -10px; z-index: -1; opacity: 0.8;
         }
-        .testimonial-author { 
-            border-top: 1px solid #f1f5f9; 
-            padding-top: 20px; 
-            font-weight: 700; 
-            font-size: 0.95rem; 
-            color: var(--primary); 
-        }
+        .testimonial-author { border-top: 1px solid #f1f5f9; padding-top: 15px; font-weight: 700; font-size: 0.9rem; }
 
-        .cta-box { background: var(--secondary); color: white; padding: 70px 40px; border-radius: 24px; text-align: center; margin: 60px 0; }
-
-        footer { text-align: center; padding: 60px 20px; border-top: 1px solid #e2e8f0; background: white; }
-        .footer-info { display: flex; align-items: center; justify-content: center; gap: 15px; font-weight: 600; color: #1e293b; flex-wrap: wrap; }
-        
-        /* Estilos de Instagram Corregidos */
+        /* --- FOOTER & INSTAGRAM ANIMADO --- */
+        footer { text-align: center; padding: 60px 20px; background: white; border-top: 1px solid #e2e8f0; }
         .instagram-link {
             display: inline-flex; align-items: center; justify-content: center;
-            width: 45px; height: 45px; background: var(--insta-gradient);
-            border-radius: 12px; color: white; text-decoration: none; font-size: 1.5rem;
-            box-shadow: 0 4px 10px rgba(225, 48, 108, 0.3);
-            transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            width: 50px; height: 50px; background: var(--insta-gradient);
+            border-radius: 14px; color: white; text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 5px 15px rgba(225, 48, 108, 0.3);
         }
-        .instagram-link img {
-            width: 24px;
-            height: 24px;
-            transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        .instagram-link:hover img {
-            transform: rotate(15deg) scale(1.1); /* Movimiento de giro y escalado */
-        }
-        
+        /* Animación del icono SVG */
+        .instagram-link svg { transition: all 0.4s ease; }
+        .instagram-link:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(225, 48, 108, 0.5); }
+        .instagram-link:hover svg { transform: rotate(15deg) scale(1.2); }
+
     </style>
 </head>
 <body>
 
-<a href="https://wa.me/584242624559?text=Hola%20Abogada%20Mariale" class="whatsapp-float" target="_blank">W</a>
-
-<header>
-    <div class="header-text">
-        <h1>Abogada María Alejandra Parra: Pionera en LegalTech</h1>
-        <p>Experticia jurídica combinada con herramientas de última generación. Optimizamos la recaudación y el blindaje legal de su condominio con procesos ejecutables en Caracas.</p>
-        <div class="header-btns">
-            <a href="https://wa.me/584242624559?text=Hola%20Abogada%20Mariale" class="btn-ws">Solicitar Diagnóstico LegalTech</a>
-            <a href="https://wa.me/584242624559?text=Hola,%20deseo%20acceder%20al%20sistema" class="btn-sys">Acceso al Sistema</a>
-        </div>
-    </div>
-    <div class="photo-container">
-        <img src="foto-abogada.jpg" alt="Abogada María Alejandra Parra" class="header-photo">
-    </div>
-</header>
-
 <div class="container">
-    <div class="legaltech-banner">
-        <div class="lt-item">
-            <h4>¿Qué es LegalTech?</h4>
-            <p>Es el uso de tecnología avanzada para brindar servicios legales más rápidos, transparentes y efectivos que la abogacía tradicional.</p>
-        </div>
-        <div class="lt-item">
-            <h4>Diferencia Ejecutiva</h4>
-            <p>A diferencia de un software común, nuestro sistema genera notificaciones con <strong>respaldo legal inmediato</strong> ante la ley.</p>
-        </div>
-    </div>
-
-    <section style="margin-bottom: 80px;">
-        <h2 style="text-align: center; margin-bottom: 40px;">¿Por qué elegir nuestra Tecnología Legal?</h2>
-        <div class="comparison-grid">
-            <div class="comp-card">
-                <h4 style="color: var(--text-muted); text-transform: uppercase; font-size: 0.8rem; margin-bottom: 15px;">Software Administrativo Común</h4>
-                <ul style="list-style: none; font-size: 0.95rem;">
-                    <li style="margin-bottom: 10px;">❌ Envía recordatorios sin peso jurídico.</li>
-                    <li style="margin-bottom: 10px;">❌ No garantiza mediación profesional.</li>
-                    <li style="margin-bottom: 10px;">❌ Limitado a la gestión de datos.</li>
-                </ul>
-            </div>
-            <div class="comp-card featured">
-                <span class="comp-tag">VALOR EXCLUSIVO</span>
-                <h4 style="color: var(--tech); text-transform: uppercase; font-size: 0.8rem; margin-bottom: 15px;">Nuestro Sistema LegalTech</h4>
-                <ul style="list-style: none; font-size: 0.95rem;">
-                    <li style="margin-bottom: 10px;">✅ <strong>Notificación Certificada:</strong> Fuerza legal inmediata.</li>
-                    <li style="margin-bottom: 10px;">✅ <strong>Gestión Multimoneda:</strong> Cobranza USD/Bs automatizada.</li>
-                    <li style="margin-bottom: 10px;">✅ <strong>Blindaje Profesional:</strong> Basado en la Ley de Propiedad Horizontal.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
     <div class="services-grid">
-        <div class="card card-cobranza">
-            <span class="icon">📲</span>
-            <h3>Cobranza Inteligente</h3>
-            <p>Utilizamos algoritmos de seguimiento para contactar al moroso, logrando acuerdos rápidos y transparentes mediante tecnología.</p>
-        </div>
-
-        <div class="card card-legal">
-            <span class="icon">⚖️</span>
-            <h3>Blindaje Jurídico</h3>
-            <p style="font-weight: 700; color: var(--secondary); margin-bottom: 10px;">25 años de trayectoria</p>
-            <p><strong>Cobranza extrajudicial y judicial</strong> bajo la Ley de Propiedad Horizontal. Especialistas en derecho laboral y defensa integral del patrimonio.</p>
-        </div>
-
+        <div class="card card-cobranza"><span class="icon">📲</span><h3>Cobranza Inteligente</h3><p>Seguimiento automatizado para acuerdos rápidos.</p></div>
+        <div class="card card-legal"><span class="icon">⚖️</span><h3>Blindaje Jurídico</h3><p>25 años de trayectoria en Propiedad Horizontal.</p></div>
         <div class="card card-infra">
             <span class="icon">🏗️</span>
             <h3>Gestión de Infraestructura</h3>
-            <p>Maximizamos el valor de su patrimonio mediante supervisión técnica especializada. Realizamos <strong>auditorías trimestrales</strong> con informes de diagnóstico para una planificación operativa eficiente.</p>
-            <div class="card-footer-tag">SOLUCIONES TÉCNICAS INMEDIATAS</div>
+            <p>Maximizamos el valor del inmueble con auditorías trimestrales e informes técnicos de planificación.</p>
         </div>
-
-        <div class="card card-it">
-            <span class="icon">⚙️</span>
-            <h3>Automatización IT</h3>
-            <p>Eliminamos el error humano transformando flujos manuales en procesos digitales de alta eficiencia y precisión absoluta.</p>
-        </div>
-
-        <div class="card card-gov">
-            <span class="icon">🤝</span>
-            <h3>Gobernanza Digital</h3>
-            <p>Un ecosistema eficiente donde la <strong>Junta comunica</strong>, la <strong>Comunidad participa</strong> y la <strong>Administradora garantiza transparencia</strong> total.</p>
-        </div>
+        <div class="card card-it"><span class="icon">⚙️</span><h3>Automatización IT</h3><p>Transformamos flujos manuales en procesos digitales.</p></div>
+        <div class="card card-gov"><span class="icon">🤝</span><h3>Gobernanza Digital</h3><p>Transparencia total entre Junta y Comunidad.</p></div>
     </div>
 
-    <section>
-        <h2 style="text-align: center; margin-bottom: 30px;">Vea nuestra tecnología en acción</h2>
-        <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/6oCgFTqCEQc" allowfullscreen></iframe>
+    <h2 style="text-align:center; margin-bottom:40px;">Confianza y Resultados</h2>
+    <div class="testimonials-grid">
+        <div class="testimonial-card">
+            <p class="testimonial-text">"La Dra. Parra mantuvo el control con una claridad jurídica que dejó a todos paralizados. Logramos manejar temas delicados con éxito."</p>
+            <div class="testimonial-author">Junta de Condominio, Edificio Valle Verde</div>
         </div>
-    </section>
-
-    <section>
-        <h2 style="text-align: center; font-size: 2rem;">Confianza y Resultados</h2>
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <p class="testimonial-text">"No esperaban semejante nivel de exposición. La reunión fue extensa y exigente, pero la Dra. Parra mantuvo el control con una claridad jurídica que dejó a todos paralizados."</p>
-                <div class="testimonial-author">Junta de Condominio, Edificio Valle Verde</div>
-            </div>
-            <div class="testimonial-card">
-                <p class="testimonial-text">"Agradezco profundamente la gestión de la Dra. Parra. No solo logramos saldar la deuda por completo, sino que el proceso fue impecable. Su profesionalismo marca la diferencia."</p>
-                <div class="testimonial-author">Copropietario, Edificio Suerte</div>
-            </div>
-            <div class="testimonial-card">
-                <p class="testimonial-text">"Excelente profesionalismo. La Dra. María Alejandra combina una experticia jurídica única con una calidez humana que facilita enormemente la resolución de conflictos."</p>
-                <div class="testimonial-author">Administración, Edificio Tiniquijina</div>
-            </div>
+        <div class="testimonial-card">
+            <p class="testimonial-text">"Agradezco profundamente la gestión. El proceso fue impecable y logramos saldar la deuda por completo. ¡Totalmente recomendada!"</p>
+            <div class="testimonial-author">Copropietario, Edificio Suerte</div>
         </div>
-    </section>
-
-    <div class="cta-box">
-        <h2 style="font-size: 2.2rem; margin-bottom: 15px;">¿Listo para transformar la gestión de su comunidad?</h2>
-        <a href="https://wa.me/584242624559?text=Hola%20Mariale" class="btn-ws">Consultoría LegalTech</a>
     </div>
 </div>
 
 <footer>
-    <div class="footer-info">
-        <span>Abogada María Alejandra Parra</span>
-        <span>|</span>
-        <span>Caracas, Venezuela</span>
-        <a href="https://www.instagram.com/marialeparramartinez" target="_blank" class="instagram-link">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-            </svg>
-        </a>
-    </div>
-    <p style="margin-top: 15px; font-size: 0.85rem; color: #94a3b8;">Tecnología: Lisbeth Parra Martínez (LegalTech Advisor) &copy; 2026</p>
+    <div style="margin-bottom: 20px; font-weight: 600;">Abogada María Alejandra Parra | Caracas</div>
+    <a href="https://www.instagram.com/marialeparramartinez" target="_blank" class="instagram-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+    </a>
+    <p style="margin-top: 20px; font-size: 0.8rem; color: #94a3b8;">© 2026 | LegalTech Advisor: Lisbeth Parra Martínez</p>
 </footer>
 
 </body>
