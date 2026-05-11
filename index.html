@@ -17,6 +17,7 @@
     <meta property="og:image" content="https://cobranzalegalcondominio-ops.github.io/web-abogada/foto-abogada.jpg">
 
     <link rel="preload" as="image" href="foto-abogada.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <style>
@@ -123,7 +124,7 @@
             line-height: 1.6;
         }
 
-        /* --- CARDS DE SERVICIOS --- */
+        /* --- CARDS DE SERVICIOS CON GLOW --- */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -132,19 +133,38 @@
         }
         .card {
             background: white; padding: 40px; border-radius: 24px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03); transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03); 
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
             border: 1px solid #f1f5f9; position: relative; overflow: hidden;
             display: flex; flex-direction: column;
         }
-        .card::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 6px; }
-        .card-cobranza::before { background: var(--tech); }
-        .card-legal::before { background: var(--secondary); }
-        .card-it::before { background: var(--fucsia); }
-        .card-gov::before { background: var(--accent); }
-        .card-infra::before { background: var(--infra); }
+        
+        /* Iconos Vectoriales */
+        .card i {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            transition: all 0.3s ease;
+        }
 
-        .card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
-        .icon { font-size: 2.5rem; margin-bottom: 20px; display: block; }
+        .card:hover { transform: translateY(-10px); }
+
+        /* Efectos de Resplandor por Categoría */
+        .card-cobranza:hover { box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15); border-color: var(--tech); }
+        .card-cobranza:hover i { color: var(--tech); transform: scale(1.1); }
+
+        .card-legal:hover { box-shadow: 0 20px 40px rgba(0, 168, 107, 0.15); border-color: var(--secondary); }
+        .card-legal:hover i { color: var(--secondary); transform: scale(1.1); }
+
+        .card-infra:hover { box-shadow: 0 20px 40px rgba(245, 158, 11, 0.15); border-color: var(--infra); }
+        .card-infra:hover i { color: var(--infra); transform: scale(1.1); }
+
+        .card-it:hover { box-shadow: 0 20px 40px rgba(255, 0, 255, 0.15); border-color: var(--fucsia); }
+        .card-it:hover i { color: var(--fucsia); transform: scale(1.1); }
+
+        .card-gov:hover { box-shadow: 0 20px 40px rgba(0, 122, 255, 0.15); border-color: var(--accent); }
+        .card-gov:hover i { color: var(--accent); transform: scale(1.1); }
+
         .card h3 { margin-bottom: 15px; font-weight: 700; }
         .card-footer-tag { margin-top: auto; padding-top: 15px; font-size: 0.8rem; font-weight: 700; color: var(--text-muted); border-top: 1px solid #f1f5f9; text-transform: uppercase; }
 
@@ -152,15 +172,15 @@
         .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 40px 0; }
         .testimonial-card { 
             background: white; padding: 40px 30px; border-radius: 20px; 
-            border: 1px solid #edf2f7; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid #edf2f7; transition: all 0.4s ease;
             position: relative;
         }
         .testimonial-card:hover {
             transform: translateY(-5px);
             border-color: var(--tech);
-            box-shadow: 0 15px 30px rgba(99, 102, 241, 0.15);
+            box-shadow: 0 15px 30px rgba(99, 102, 241, 0.1);
         }
-        .testimonial-text { position: relative; font-size: 0.95rem; color: #4a5568; margin-bottom: 25px; z-index: 1; }
+        .testimonial-text { position: relative; font-size: 0.95rem; color: #4a5568; margin-bottom: 25px; z-index: 1; font-style: italic; }
         .testimonial-text::before {
             content: "\201C"; font-family: serif; font-size: 4rem; color: #edf2f7;
             position: absolute; top: -25px; left: -15px; z-index: -1;
@@ -188,7 +208,6 @@
             box-shadow: 0 4px 10px rgba(225, 48, 108, 0.3);
         }
         footer .instagram-link { width: 45px; height: 45px; border-radius: 12px; }
-
         .instagram-link svg { transition: all 0.4s ease; }
         .instagram-link:hover { transform: translateY(-3px); }
         .instagram-link:hover svg { transform: rotate(15deg) scale(1.2); }
@@ -196,7 +215,9 @@
 </head>
 <body>
 
-<a href="https://wa.me/584242624559?text=Hola%20Abogada%20Mariale" class="whatsapp-float" target="_blank">W</a>
+<a href="https://wa.me/584242624559?text=Hola%20Abogada%20Mariale" class="whatsapp-float" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
 
 <header>
     <div class="header-text">
@@ -234,20 +255,20 @@
             <span>RADIO COMUNIDAD</span>
         </div>
         <p class="media-text">
-            Consultora experta en <strong>Derecho Condominal</strong> y pionera en <strong>LegalTech</strong>, compartiendo herramientas para la protección del patrimonio inmobiliario en las pantallas y emisoras más importantes de Venezuela junto a figuras como <strong>Isnardo Bravo</strong>.
+            Consultora experta en <strong>Derecho Condominal</strong> y pionera en <strong>LegalTech</strong>, compartiendo herramientas para la protección del patrimonio inmobiliario en las pantallas y emisoras más importantes de Venezuela.
         </p>
     </div>
 
     <div class="services-grid">
         <div class="card card-cobranza">
-            <span class="icon">📲</span>
+            <i class="fa-solid fa-microchip"></i>
             <h3>Cobranza Inteligente</h3>
             <p>Modelos de gestión extrajudicial y judicial con <strong>costo cero para el condominio</strong>. Honorarios por éxito cargados directamente al deudor.</p>
             <div class="card-footer-tag">RECUPERACIÓN EFECTIVA</div>
         </div>
 
         <div class="card card-legal">
-            <span class="icon">⚖️</span>
+            <i class="fa-solid fa-scale-balanced"></i>
             <h3>Blindaje Jurídico</h3>
             <p style="color: var(--secondary); font-weight: 700; margin-bottom: 5px;">26 años de trayectoria</p>
             <p>Especialistas en <strong>Derecho Condominal y Laboral</strong>. Asesoría integral para la gestión de personal y cumplimiento normativo del edificio.</p>
@@ -255,21 +276,21 @@
         </div>
 
         <div class="card card-infra">
-            <span class="icon">🏗️</span>
+            <i class="fa-solid fa-building-shield"></i>
             <h3>Gestión de Infraestructura</h3>
-            <p>Inspecciones técnicas para el <strong>diagnóstico de estructuras</strong>. Maximizamos el valor del inmueble mediante planificación operativa eficiente.</p>
+            <p>Gestión de Infraestructura <strong>. Supervisión técnica especializada para mantener su patrimonio..</p>
             <div class="card-footer-tag">AUDITORÍA TÉCNICA</div>
         </div>
 
         <div class="card card-it">
-            <span class="icon">⚙️</span>
+            <i class="fa-solid fa-robot"></i>
             <h3>Automatización IT</h3>
             <p>Implementación de <strong>LegalTech</strong> para la localización avanzada de deudores y automatización de flujos administrativos de alta precisión.</p>
             <div class="card-footer-tag">EFICIENCIA DIGITAL</div>
         </div>
 
         <div class="card card-gov">
-            <span class="icon">🎓</span>
+            <i class="fa-solid fa-users-gear"></i>
             <h3>Talleres Formativos</h3>
             <p>Capacitación especializada para <strong>Juntas de Condominio</strong> y Asambleas de Propietarios sobre gobernanza y transparencia total.</p>
             <div class="card-footer-tag">FORMACIÓN CIUDADANA</div>
