@@ -137,9 +137,9 @@
             transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
             border: 1px solid #f1f5f9; position: relative; overflow: hidden;
             display: flex; flex-direction: column;
+            min-height: 320px;
         }
         
-        /* Iconos Vectoriales */
         .card i {
             font-size: 2.5rem;
             margin-bottom: 20px;
@@ -149,7 +149,6 @@
 
         .card:hover { transform: translateY(-10px); }
 
-        /* Efectos de Resplandor por Categoría */
         .card-cobranza:hover { box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15); border-color: var(--tech); }
         .card-cobranza:hover i { color: var(--tech); transform: scale(1.1); }
 
@@ -278,15 +277,22 @@
         <div class="card card-infra">
             <i class="fa-solid fa-building-shield"></i>
             <h3>Gestión de Infraestructura</h3>
-            <p>Gestión de Infraestructura <strong>. Supervisión técnica especializada para mantener su patrimonio..</p>
+            <p>Supervisión técnica especializada para mantener su patrimonio inmobiliario mediante auditorías y planificación operativa eficiente.</p>
             <div class="card-footer-tag">AUDITORÍA TÉCNICA</div>
         </div>
 
         <div class="card card-it">
             <i class="fa-solid fa-robot"></i>
             <h3>Automatización IT</h3>
-            <p>Implementación de <strong>LegalTech</strong> para la localización avanzada de deudores y automatización de flujos administrativos de alta precisión.</p>
+            <p>Eliminamos el error humano transformando flujos manuales en <strong>procesos digitales</strong> de alta eficiencia y precisión absoluta.</p>
             <div class="card-footer-tag">EFICIENCIA DIGITAL</div>
+        </div>
+
+        <div class="card card-gov">
+            <i class="fa-solid fa-handshake"></i>
+            <h3>Gobernanza Digital</h3>
+            <p>Un ecosistema eficiente donde la <strong>Junta comunica</strong>, la <strong>Comunidad participa</strong> y la <strong>Administradora garantiza transparencia</strong> total.</p>
+            <div class="card-footer-tag">TRANSPARENCIA ACTIVA</div>
         </div>
 
         <div class="card card-gov">
