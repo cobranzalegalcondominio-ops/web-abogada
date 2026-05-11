@@ -4,23 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Abogada María Alejandra Parra | Derecho Condominial y Prop-Tech Caracas</title>
-    <meta name="description" content="Especialista en Derecho Condominal en Caracas. Recuperación de cartera morosa, blindaje jurídico y tecnología aplicada a la administración de condominios.">
-    <meta name="keywords" content="Abogado Condominio Caracas, Cobranza Condominio Venezuela, Ley Propiedad Horizontal, Prop-Tech Venezuela, María Alejandra Parra, Administradora de Condominios">
+    <title>Abogada María Alejandra Parra | Pionera en LegalTech y Derecho Condominal</title>
+    <meta name="description" content="Líder en LegalTech y Derecho Condominal en Caracas. Cobranza automatizada con fuerza legal, gestión multimoneda y blindaje jurídico para condominios.">
+    <meta name="keywords" content="LegalTech Venezuela, Abogado Condominio Caracas, Cobranza Condominio, Prop-Tech, María Alejandra Parra, Automatización Legal">
     <meta name="author" content="Lisbeth Parra Martínez">
     <meta name="robots" content="index, follow">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://cobranzalegalcondominio-ops.github.io/web-abogada/">
-    <meta property="og:title" content="Abogada María Alejandra Parra | Legal & Prop-Tech">
-    <meta property="og:description" content="Recupere la solvencia de su comunidad con tecnología legal y cobranza omnicanal profesional.">
+    <meta property="og:title" content="Abogada María Alejandra Parra | LegalTech & Prop-Tech">
+    <meta property="og:description" content="Transformamos la gestión de su condominio con soluciones legales de alta tecnología y cobranza ejecutable.">
     <meta property="og:image" content="https://cobranzalegalcondominio-ops.github.io/web-abogada/foto-abogada.jpg">
-
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://cobranzalegalcondominio-ops.github.io/web-abogada/">
-    <meta property="twitter:title" content="Abogada María Alejandra Parra | Legal & Prop-Tech">
-    <meta property="twitter:description" content="Especialista en Derecho Condominal y soluciones tecnológicas para administradoras en Caracas.">
-    <meta property="twitter:image" content="https://cobranzalegalcondominio-ops.github.io/web-abogada/foto-abogada.jpg">
 
     <link rel="preload" as="image" href="foto-abogada.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -45,7 +39,6 @@
             line-height: 1.6; 
         }
 
-        /* Header & Hero */
         header {
             background: linear-gradient(135deg, var(--primary) 0%, #334155 100%);
             color: white;
@@ -73,6 +66,31 @@
 
         .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
 
+        /* Banner LegalTech Explicativo */
+        .legaltech-banner {
+            background: var(--primary);
+            color: white;
+            padding: 40px;
+            border-radius: 24px;
+            margin-bottom: 60px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            align-items: center;
+        }
+        .lt-item h4 { color: var(--fucsia); margin-bottom: 10px; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
+
+        /* Sección Comparativa */
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+        .comp-card { background: #fff; padding: 30px; border-radius: 20px; border: 1px solid #e2e8f0; }
+        .comp-card.featured { border: 2px solid var(--tech); background: #EEF2FF; position: relative; }
+        .comp-tag { position: absolute; top: -15px; right: 20px; background: var(--fucsia); color: white; padding: 4px 12px; border-radius: 10px; font-size: 0.7rem; font-weight: bold; }
+
         .tech-highlight {
             background: linear-gradient(rgba(99, 102, 241, 0.05), rgba(99, 102, 241, 0.1));
             border: 1px solid rgba(99, 102, 241, 0.2);
@@ -97,145 +115,65 @@
             margin-bottom: 80px;
         }
         .card {
-            background: white;
-            padding: 40px;
-            border-radius: 24px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-            transition: all 0.3s ease;
-            border: 1px solid #f1f5f9;
-            position: relative;
-            overflow: hidden;
+            background: white; padding: 40px; border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03); transition: all 0.3s ease;
+            border: 1px solid #f1f5f9; position: relative; overflow: hidden;
         }
-        .card::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 6px;
-        }
+        .card::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 6px; }
         .card-cobranza::before { background: var(--tech); }
         .card-legal::before { background: var(--secondary); }
         .card-it::before { background: var(--primary); }
 
-        .card:hover { 
-            transform: translateY(-10px); 
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-        }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
         .icon { font-size: 2.5rem; margin-bottom: 20px; display: block; }
 
-        /* --- BOTONES CON EFECTO FUCSIA --- */
+        /* Botones */
         .btn-ws {
-            background: white;
-            color: var(--secondary);
-            padding: 16px 32px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 700;
-            display: inline-block;
-            transition: all 0.4s ease;
-            text-align: center;
-            border: 2px solid white;
+            background: white; color: var(--secondary); padding: 16px 32px;
+            border-radius: 12px; text-decoration: none; font-weight: 700;
+            display: inline-block; transition: all 0.4s ease; text-align: center; border: 2px solid white;
         }
-
         .btn-ws:hover {
-            background: var(--fucsia); 
-            color: white;
-            border-color: var(--fucsia);
-            transform: scale(1.05);
-            box-shadow: 0 10px 20px rgba(255, 0, 255, 0.3);
+            background: var(--fucsia); color: white; border-color: var(--fucsia);
+            transform: scale(1.05); box-shadow: 0 10px 20px rgba(255, 0, 255, 0.3);
         }
-
         .btn-sys {
-            background: transparent;
-            border: 2px solid white;
-            color: white;
-            padding: 16px 32px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-block;
-            transition: all 0.4s ease;
-            text-align: center;
+            background: transparent; border: 2px solid white; color: white;
+            padding: 16px 32px; border-radius: 12px; text-decoration: none;
+            font-weight: 600; display: inline-block; transition: all 0.4s ease; text-align: center;
         }
+        .btn-sys:hover { background: var(--fucsia); border-color: var(--fucsia); color: white; transform: scale(1.05); }
 
-        .btn-sys:hover {
-            background: var(--fucsia);
-            border-color: var(--fucsia);
-            color: white;
-            transform: scale(1.05);
-        }
-
-        .cta-box .btn-ws:hover {
-            background: var(--primary); 
-            color: white;
-            border-color: var(--primary);
-        }
-
-        /* WhatsApp Flotante */
         .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: var(--secondary);
-            color: white;
-            width: 60px; height: 60px;
-            border-radius: 50%;
+            position: fixed; bottom: 30px; right: 30px;
+            background-color: var(--secondary); color: white;
+            width: 60px; height: 60px; border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
-            font-size: 30px; text-decoration: none;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-            z-index: 1000;
-            transition: all 0.3s ease;
+            font-size: 30px; text-decoration: none; box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            z-index: 1000; transition: all 0.3s ease;
         }
-
-        .whatsapp-float:hover {
-            background-color: var(--fucsia);
-            transform: rotate(360deg) scale(1.1);
-        }
+        .whatsapp-float:hover { background-color: var(--fucsia); transform: rotate(360deg) scale(1.1); }
 
         .video-wrapper {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 24px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            margin: 40px 0 80px;
+            position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;
+            border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); margin: 40px 0 80px;
         }
         .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
 
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin: 40px 0;
-        }
-        .testimonial-card {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-            border: 1px solid #edf2f7;
-        }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 40px 0; }
+        .testimonial-card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); border: 1px solid #edf2f7; }
         .testimonial-text { color: var(--text-muted); font-size: 0.95rem; font-style: italic; margin-bottom: 20px; line-height: 1.5; }
         .testimonial-author { border-top: 1px solid #f1f5f9; padding-top: 15px; font-weight: 700; font-size: 0.9rem; color: var(--primary); }
 
-        .cta-box {
-            background: var(--secondary);
-            color: white;
-            padding: 70px 40px;
-            border-radius: 24px;
-            text-align: center;
-            margin: 60px 0;
-        }
+        .cta-box { background: var(--secondary); color: white; padding: 70px 40px; border-radius: 24px; text-align: center; margin: 60px 0; }
 
         footer { text-align: center; padding: 60px 20px; border-top: 1px solid #e2e8f0; background: white; }
         .footer-info { display: flex; align-items: center; justify-content: center; gap: 15px; font-weight: 600; color: #1e293b; flex-wrap: wrap; }
         .instagram-link {
             display: inline-flex; align-items: center; justify-content: center;
-            width: 45px; height: 45px;
-            background: var(--insta-gradient);
-            border-radius: 12px; color: white;
-            text-decoration: none; font-size: 1.5rem;
-            transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 4px 10px rgba(225, 48, 108, 0.3);
+            width: 45px; height: 45px; background: var(--insta-gradient);
+            border-radius: 12px; color: white; text-decoration: none; font-size: 1.5rem;
+            transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); box-shadow: 0 4px 10px rgba(225, 48, 108, 0.3);
         }
         .instagram-link:hover { transform: scale(1.15) rotate(5deg); }
     </style>
@@ -246,10 +184,10 @@
 
 <header>
     <div class="header-text">
-        <h1>Recupere la solvencia de su Condominio con Tecnología Legal</h1>
-        <p>Especialista en Derecho Condominal y Prop-Tech. Optimizamos su recaudación mediante cobranza omnicanal y blindaje jurídico profesional en Caracas.</p>
+        <h1>Abogada María Alejandra Parra: Pionera en LegalTech</h1>
+        <p>Experticia jurídica combinada con herramientas de última generación. Optimizamos la recaudación y el blindaje legal de su condominio con procesos ejecutables en Caracas.</p>
         <div class="header-btns">
-            <a href="https://wa.me/584242624559?text=Hola%20Abogada%20Mariale" class="btn-ws">Solicitar Diagnóstico Gratuito</a>
+            <a href="https://wa.me/584242624559?text=Hola%20Abogada%20Mariale" class="btn-ws">Solicitar Diagnóstico LegalTech</a>
             <a href="https://wa.me/584242624559?text=Hola,%20deseo%20acceder%20al%20sistema" class="btn-sys">Acceso al Sistema</a>
         </div>
     </div>
@@ -259,25 +197,59 @@
 </header>
 
 <div class="container">
+    <div class="legaltech-banner">
+        <div class="lt-item">
+            <h4>¿Qué es LegalTech?</h4>
+            <p>Es el uso de tecnología avanzada para brindar servicios legales más rápidos, transparentes y efectivos que la abogacía tradicional.</p>
+        </div>
+        <div class="lt-item">
+            <h4>Diferencia Ejecutiva</h4>
+            <p>A diferencia de un software común, nuestro sistema genera notificaciones con <strong>respaldo legal inmediato</strong> ante la ley.</p>
+        </div>
+    </div>
+
+    <section style="margin-bottom: 80px;">
+        <h2 style="text-align: center; margin-bottom: 40px;">¿Por qué elegir nuestra Tecnología Legal?</h2>
+        <div class="comparison-grid">
+            <div class="comp-card">
+                <h4 style="color: var(--text-muted); text-transform: uppercase; font-size: 0.8rem; margin-bottom: 15px;">Software Administrativo Común</h4>
+                <ul style="list-style: none; font-size: 0.95rem;">
+                    <li style="margin-bottom: 10px;">❌ Envía recordatorios sin peso jurídico.</li>
+                    <li style="margin-bottom: 10px;">❌ No garantiza mediación profesional.</li>
+                    <li style="margin-bottom: 10px;">❌ Limitado a la gestión de datos.</li>
+                </ul>
+            </div>
+            <div class="comp-card featured">
+                <span class="comp-tag">VALOR EXCLUSIVO</span>
+                <h4 style="color: var(--tech); text-transform: uppercase; font-size: 0.8rem; margin-bottom: 15px;">Nuestro Sistema LegalTech</h4>
+                <ul style="list-style: none; font-size: 0.95rem;">
+                    <li style="margin-bottom: 10px;">✅ <strong>Notificación Certificada:</strong> Fuerza legal inmediata.</li>
+                    <li style="margin-bottom: 10px;">✅ <strong>Gestión Multimoneda:</strong> Cobranza USD/Bs automatizada.</li>
+                    <li style="margin-bottom: 10px;">✅ <strong>Blindaje Profesional:</strong> Basado en la Ley de Propiedad Horizontal.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <div class="tech-highlight">
         <div class="tech-content">
-            <span class="tech-tag">Exclusivo para Administradoras</span>
-            <h2>Sistema Administrativo Integral</h2>
-            <p>Control de finanzas y comunicación en un solo lugar con nuestra plataforma 360°.</p>
+            <span class="tech-tag">Optimizado para Venezuela</span>
+            <h2>Gestión Multimoneda Inteligente</h2>
+            <p>Automatizamos la conciliación en Bolívares y Divisas con actualización diaria de tasa oficial, garantizando la solvencia y transparencia del condominio.</p>
             <ul style="margin: 20px 0; list-style: none;">
-                <li>✅ Conciliación bancaria automatizada</li>
-                <li>✅ Generación de recibos digitales instantáneos</li>
-                <li>✅ Reportes de gestión en tiempo real</li>
+                <li>✅ Reportes de solvencia en tiempo real para Juntas.</li>
+                <li>✅ Conciliación bancaria automatizada.</li>
+                <li>✅ Notificaciones omnicanal (WhatsApp y Email).</li>
             </ul>
         </div>
-        <div class="icon" style="font-size: 8rem; opacity: 0.1;">💻</div>
+        <div class="icon" style="font-size: 8rem; opacity: 0.1;">📊</div>
     </div>
 
     <div class="services-grid">
         <div class="card card-cobranza">
             <span class="icon">📲</span>
-            <h3>Cobranza Omnicanal</h3>
-            <p>Automatice el seguimiento de mora a través de <strong>WhatsApp y Correo</strong>. Aumente la recaudación hasta en un 40%.</p>
+            <h3>Cobranza Inteligente</h3>
+            <p>Utilizamos algoritmos de seguimiento para contactar al moroso, logrando acuerdos rápidos y transparentes.</p>
         </div>
         <div class="card card-legal">
             <span class="icon">⚖️</span>
@@ -287,7 +259,7 @@
         <div class="card card-it">
             <span class="icon">⚙️</span>
             <h3>Automatización IT</h3>
-            <p>Transformamos sus flujos de trabajo actuales eliminando el error humano mediante <strong>tecnología de punta</strong>.</p>
+            <p>Eliminamos el error humano transformando flujos manuales en procesos digitales de alta eficiencia.</p>
         </div>
     </div>
 
@@ -299,26 +271,26 @@
     </section>
 
     <section>
-        <h2 style="text-align: center; font-size: 2rem;">Lo que dicen nuestras comunidades</h2>
+        <h2 style="text-align: center; font-size: 2rem;">Confianza y Resultados</h2>
         <div class="testimonials-grid">
             <div class="testimonial-card">
-                <p class="testimonial-text">"Agradezco a Dios haberlos conocido... me siento con mucha mejor energía ante la comunidad."</p>
+                <p class="testimonial-text">"La transparencia que aporta su sistema nos dio la paz que necesitábamos en la junta."</p>
                 <div class="testimonial-author">Junta de Condominio, Edificio Valle Verde</div>
             </div>
             <div class="testimonial-card">
-                <p class="testimonial-text">"Anexo pago total de deuda más honorarios. Gracias Dra. Mariale por tu profesionalismo."</p>
+                <p class="testimonial-text">"Recuperamos deudas de años en apenas meses. El método LegalTech realmente funciona."</p>
                 <div class="testimonial-author">Copropietario, Edificio Suerte</div>
             </div>
             <div class="testimonial-card">
-                <p class="testimonial-text">"Todo el reconocimiento se lo lleva usted, nos encantó su profesionalismo."</p>
+                <p class="testimonial-text">"Una abogada que entiende de tecnología es lo que Caracas necesitaba."</p>
                 <div class="testimonial-author">Administración, Edificio Tiniquijina</div>
             </div>
         </div>
     </section>
 
     <div class="cta-box">
-        <h2 style="font-size: 2.2rem; margin-bottom: 15px;">¿Listo para profesionalizar su comunidad?</h2>
-        <a href="https://wa.me/584242624559?text=Hola%20Mariale" class="btn-ws">Solicitar Diagnóstico Gratuito</a>
+        <h2 style="font-size: 2.2rem; margin-bottom: 15px;">¿Llevamos su condominio al siglo XXI?</h2>
+        <a href="https://wa.me/584242624559?text=Hola%20Mariale" class="btn-ws">Consultoría LegalTech Gratis</a>
     </div>
 </div>
 
@@ -335,11 +307,8 @@
             </svg>
         </a>
     </div>
-    <p style="margin-top: 15px; font-size: 0.85rem; color: #94a3b8;">Tecnología: Lisbeth Parra Martínez (Asesor IT) &copy; 2026</p>
+    <p style="margin-top: 15px; font-size: 0.85rem; color: #94a3b8;">Tecnología: Lisbeth Parra Martínez (LegalTech Advisor) &copy; 2026</p>
 </footer>
 
 </body>
-</html>         
-       
-      
-        
+</html>
