@@ -108,7 +108,7 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 25px;
             margin-bottom: 80px;
         }
@@ -120,7 +120,8 @@
         .card::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 6px; }
         .card-cobranza::before { background: var(--tech); }
         .card-legal::before { background: var(--secondary); }
-        .card-it::before { background: var(--primary); }
+        .card-it::before { background: var(--fucsia); }
+        .card-gov::before { background: var(--accent); }
 
         .card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
         .icon { font-size: 2.5rem; margin-bottom: 20px; display: block; }
@@ -159,20 +160,17 @@
 
         .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 40px 0; }
         .testimonial-card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); border: 1px solid #edf2f7; }
-        .testimonial-text { color: var(--text-muted); font-size: 0.95rem; font-style: italic; margin-bottom: 20px; line-height: 1.5; }
         .testimonial-author { border-top: 1px solid #f1f5f9; padding-top: 15px; font-weight: 700; font-size: 0.9rem; color: var(--primary); }
 
         .cta-box { background: var(--secondary); color: white; padding: 70px 40px; border-radius: 24px; text-align: center; margin: 60px 0; }
 
         footer { text-align: center; padding: 60px 20px; border-top: 1px solid #e2e8f0; background: white; }
-        .footer-info { display: flex; align-items: center; justify-content: center; gap: 15px; font-weight: 600; color: #1e293b; flex-wrap: wrap; }
         .instagram-link {
             display: inline-flex; align-items: center; justify-content: center;
             width: 45px; height: 45px; background: var(--insta-gradient);
             border-radius: 12px; color: white; text-decoration: none; font-size: 1.5rem;
             transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); box-shadow: 0 4px 10px rgba(225, 48, 108, 0.3);
         }
-        .instagram-link:hover { transform: scale(1.15) rotate(5deg); }
     </style>
 </head>
 <body>
@@ -228,20 +226,6 @@
         </div>
     </section>
 
-    <div class="tech-highlight">
-        <div class="tech-content">
-            <span class="tech-tag">Optimizado para Venezuela</span>
-            <h2>Gestión Multimoneda Inteligente</h2>
-            <p>Automatizamos la conciliación en Bolívares y Divisas con actualización diaria de tasa oficial, garantizando la solvencia y transparencia del condominio.</p>
-            <ul style="margin: 20px 0; list-style: none;">
-                <li>✅ Reportes de solvencia en tiempo real para Juntas.</li>
-                <li>✅ Conciliación bancaria automatizada.</li>
-                <li>✅ Notificaciones omnicanal (WhatsApp y Email).</li>
-            </ul>
-        </div>
-        <div class="icon" style="font-size: 8rem; opacity: 0.1;">📊</div>
-    </div>
-
     <div class="services-grid">
         <div class="card card-cobranza">
             <span class="icon">📲</span>
@@ -258,6 +242,12 @@
 
         <div class="card card-it">
             <span class="icon">⚙️</span>
+            <h3>Automatización IT</h3>
+            <p>Eliminamos el error humano transformando flujos manuales en procesos digitales de alta eficiencia y precisión absoluta.</p>
+        </div>
+
+        <div class="card card-gov">
+            <span class="icon">🤝</span>
             <h3>Gobernanza Digital</h3>
             <p>Un ecosistema eficiente donde la <strong>Junta comunica</strong>, la <strong>Comunidad participa</strong> y la <strong>Administradora garantiza transparencia</strong> total.</p>
         </div>
