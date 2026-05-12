@@ -144,9 +144,14 @@
         .media-logos span { font-weight: 800; font-size: 1.1rem; }
         .media-text { max-width: 850px; margin: 0 auto; font-size: 1.05rem; color: #334155; line-height: 1.6; }
  
+        /* Ajuste de Video para ocupar menos espacio */
+        .video-container-box {
+            max-width: 800px;
+            margin: 0 auto 60px auto;
+        }
         .video-wrapper {
             position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;
-            max-width: 100%; background: #000; border-radius: 24px; margin-bottom: 60px;
+            background: #000; border-radius: 24px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
         .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
@@ -300,13 +305,15 @@
         </p>
     </div>
  
-    <div class="video-wrapper reveal">
-        <iframe 
-          src="https://www.youtube.com/embed/hrh-i5Klg3Q" 
-          title="Abogada María Alejandra Parra - Cobranza Inteligente" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          allowfullscreen>
-       </iframe>
+    <div class="video-container-box reveal">
+        <div class="video-wrapper">
+            <iframe 
+              src="https://www.youtube.com/embed/hrh-i5Klg3Q" 
+              title="Abogada María Alejandra Parra - Cobranza Inteligente" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen>
+           </iframe>
+        </div>
     </div>
  
     <div class="admin-strength-card reveal">
@@ -459,4 +466,6 @@
 </script>
  
 </body>
-</html>
+</html>   
+   
+  
