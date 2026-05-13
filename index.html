@@ -29,7 +29,7 @@
         :root {
             --primary: #1A1C1E;    
             --accent: #007AFF;    
-            --tech: #6366F1;               
+            --tech: #6366F1;                
             --secondary: #00A86B;  
             --bg-body: #F8FAFC;    
             --text-muted: #64748B;
@@ -48,16 +48,53 @@
             font-display: swap; 
         }
 
+        /* --- NUEVA BARRA SUPERIOR (LOGO Y CORREOS) --- */
+        .top-bar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 10px 0;
+            width: 100%;
+        }
+        .top-bar-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-main {
+            height: 60px; /* Tamaño proporcional */
+            width: auto;
+            display: block;
+        }
+        .contact-info-top {
+            text-align: right;
+        }
+        .contact-info-top a {
+            display: block;
+            text-decoration: none;
+            color: var(--primary);
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .contact-info-top a:hover {
+            color: var(--tech);
+        }
+
         header {
             background: linear-gradient(135deg, var(--primary) 0%, #334155 100%);
             color: white;
-            padding: 100px 20px;
+            padding: 80px 20px; /* Reducido un poco por la barra superior */
             display: flex;
             align-items: center;
             justify-content: center;
             flex-wrap: wrap;
             gap: 50px;
         }
+        /* --- FIN CAMBIOS BARRA SUPERIOR --- */
+
         .header-text { max-width: 600px; }
         
         .header-badge {
@@ -84,7 +121,6 @@
 
         .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
 
-        /* Estilos Acordeón SEO */
         .seo-accordion {
             background: white;
             border: 1px solid #e2e8f0;
@@ -210,7 +246,6 @@
         .card h3 { margin-bottom: 15px; font-weight: 700; }
         .card-footer-tag { margin-top: auto; padding-top: 15px; font-size: 0.8rem; font-weight: 700; color: var(--text-muted); border-top: 1px solid #f1f5f9; text-transform: uppercase; }
 
-        /* Testimonios */
         .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 40px 0 80px 0; }
         .testimonial-card { 
             background: white; padding: 40px 30px; border-radius: 20px; 
@@ -262,9 +297,29 @@
 
         @keyframes fadeInIntro { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         header .header-text, header .photo-container { animation: fadeInIntro 1.2s ease-out forwards; }
+        
+        /* Ajuste para móvil */
+        @media (max-width: 600px) {
+            .top-bar-container { flex-direction: column; gap: 10px; text-align: center; }
+            .contact-info-top { text-align: center; }
+            header { padding: 40px 20px; }
+            header h1 { font-size: 2rem; }
+        }
     </style>
 </head>
 <body>
+
+<nav class="top-bar">
+    <div class="top-bar-container">
+        <div class="logo-wrapper">
+            <img src="logolegaltech1.svg" alt="LegalTech Logo" class="logo-main">
+        </div>
+        <div class="contact-info-top">
+            <a href="mailto:info@legaltech.com.ve">info@legaltech.com.ve</a>
+            <a href="mailto:cobranzalegal@legaltech.com.ve">cobranzalegal@legaltech.com.ve</a>
+        </div>
+    </div>
+</nav>
 
 <a href="https://wa.me/584242624559?text=Buen%20d%C3%ADa%2C%20Dra.%20Mar%C3%ADa%20Alejandra.%20Quisiera%20agendar%20un%20diagn%C3%B3stico%20LegalTech%20para%20mi%20gesti%C3%B3n%20inmobiliaria." class="whatsapp-float" target="_blank">
     <i class="fa-brands fa-whatsapp"></i>
@@ -305,7 +360,7 @@
               <li><strong>Mitigación de Errores:</strong> La digitalización elimina el factor del error humano en la gestión de datos sensibles.</li>
               <li><strong>Transparencia Absoluta:</strong> Centralizar la información fortalece la confianza entre administradoras, juntas de condominio y propietarios.</li>
               <li><strong>Escalabilidad:</strong> Nuestras soluciones permiten que su gestión crezca sin incrementar proporcionalmente los costos operativos.</li>
-           </ul>
+            </ul>
         </div>
     </details>
 
@@ -478,5 +533,5 @@
 </script>
 
 </body>
-</html>  
+</html>   
          
