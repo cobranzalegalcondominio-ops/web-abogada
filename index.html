@@ -254,6 +254,25 @@
  
         header .header-text, header .photo-container { animation: fadeInIntro 1.2s ease-out forwards; }
         @keyframes fadeInIntro { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1); will-change: transform, opacity; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        header .header-text, header .photo-container { animation: fadeInIntro 1.2s ease-out forwards; }
+        @keyframes fadeInIntro { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Efecto Hover para el botón de Play del Video */
+        .video-wrapper:hover div {
+            background: rgba(255, 0, 0, 1) !important;
+            transform: scale(1.1);
+            transition: all 0.3s ease;
+        }
+        
+        .video-wrapper div {
+            transition: all 0.3s ease; /* Para que regrese suavemente a su estado original */
+        }
+    </style>
+
+
     </style>
 </head>
 <body>
@@ -314,7 +333,7 @@
 	<div class="video-container-box reveal">
   	  <div class="video-wrapper" style="background-image: url('https://img.youtube.com/vi/Mt8Mdg6NDO0/maxresdefault.jpg'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; cursor: pointer;" onclick="window.open('https://www.youtube.com/watch?v=Mt8Mdg6NDO0', '_blank')">
         
-      	  <div style="background: rgba(255,0,0,0.9); width: 80px; height: 55px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; box-shadow: 0 10px 20px rgba(0,0,0,0.3);">
+      	  <div style="background: rgba(255,0,0,0.9); width: 80px; height: 55px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; box-shadow: 0 10px 20px rgba(0,0,0,0.3);">
          	   <i class="fa-solid fa-play"></i>
         	</div>
 
@@ -481,13 +500,8 @@
 </body>
 </html>   
       
-  
- 
-                
+       
      
-
+           
        
-       
-
-
-        
+         
