@@ -30,7 +30,7 @@
         :root {
             --primary: #1A1C1E;    
             --accent: #007AFF;     
-            --tech: #6366F1;                
+            --tech: #6366F1;               
            --secondary: #00A86B;  
             --bg-body: #F8FAFC;    
            --text-muted: #64748B;
@@ -54,35 +54,21 @@
             color: white;
             padding: 100px 20px;
             display: flex;
-            align-items: center;
-            justify-content: center;
+           align-items: center;
+           justify-content: center;
             flex-wrap: wrap;
             gap: 50px;
         }
-
-        /* Estilo para el Logo en el Header */
-        .logo-container {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            margin-bottom: 30px;
-        }
-        .main-logo {
-            max-width: 220px;
-            height: auto;
-            filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
-        }
-
         .header-text { max-width: 600px; }
         
         .header-badge {
             display: flex;
-            align-items: center;
+           align-items: center;
             gap: 12px;
-            margin-bottom: 20px;
-            font-weight: 600;
+           margin-bottom: 20px;
+           font-weight: 600;
             font-size: 0.9rem;
-            letter-spacing: 0.5px;
+           letter-spacing: 0.5px;
         }
  
         header h1 { font-size: 2.8rem; margin-bottom: 20px; font-weight: 700; line-height: 1.1; }
@@ -91,9 +77,9 @@
         
        .photo-container {
             width: 320px; height: 420px;
-            border-radius: 30px; overflow: hidden;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.4);
-            background: #2a2d3e; 
+           border-radius: 30px; overflow: hidden;
+           box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+           background: #2a2d3e; 
         }
         .header-photo { width: 100%; height: 100%; object-fit: cover; }
  
@@ -101,47 +87,47 @@
  
         /* Estilos Acordeón SEO */
         .seo-accordion {
-            background: white;
+           background: white;
             border: 1px solid #e2e8f0;
-            border-radius: 16px;
-            margin-bottom: 25px;
+           border-radius: 16px;
+           margin-bottom: 25px;
             overflow: hidden;
-            transition: all 0.3s ease;
+           transition: all 0.3s ease;
         }
         .seo-accordion summary {
             padding: 20px;
             cursor: pointer;
-            font-weight: 700;
+           font-weight: 700;
             color: var(--primary);
-            list-style: none;
+           list-style: none;
             display: flex;
-            justify-content: space-between;
+           justify-content: space-between;
             align-items: center;
-            background: #fff;
+           background: #fff;
         }
         .seo-accordion summary::-webkit-details-marker { display: none; }
         .seo-accordion summary::after {
             content: '\f078';
-            font-family: 'Font Awesome 6 Free';
+           font-family: 'Font Awesome 6 Free';
             font-weight: 900;
             font-size: 0.8rem;
-            transition: transform 0.3s ease;
+           transition: transform 0.3s ease;
         }
-        .seo-accordion[open] summary::after { transform: rotate(180deg); }
-        .seo-accordion[open] { border-color: var(--tech); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-        .accordion-content { padding: 0 20px 20px 20px; color: var(--text-muted); font-size: 0.95rem; }
-        .accordion-content p { margin-bottom: 15px; }
-        .accordion-content ul { padding-left: 20px; margin-bottom: 15px; }
-        .accordion-content li { margin-bottom: 8px; }
+       .seo-accordion[open] summary::after { transform: rotate(180deg); }
+       .seo-accordion[open] { border-color: var(--tech); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+       .accordion-content { padding: 0 20px 20px 20px; color: var(--text-muted); font-size: 0.95rem; }
+       .accordion-content p { margin-bottom: 15px; }
+       .accordion-content ul { padding-left: 20px; margin-bottom: 15px; }
+       .accordion-content li { margin-bottom: 8px; }
  
        .whatsapp-float {
             position: fixed; bottom: 30px; right: 30px;
-            background-color: var(--secondary); color: white;
+           background-color: var(--secondary); color: white;
             width: 60px; height: 60px; border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
             font-size: 30px; text-decoration: none; box-shadow: 0 10px 25px rgba(0,0,0,0.2);
             z-index: 1000; 
-            transition: all 0.4s var(--bounce-curve);
+           transition: all 0.4s var(--bounce-curve);
         }
        .whatsapp-float:hover { 
            background-color: var(--fucsia); 
@@ -150,20 +136,20 @@
         }
  
         .media-section {
-            background: white; padding: 50px 30px; text-align: center; border-radius: 24px;
-            margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+           background: white; padding: 50px 30px; text-align: center; border-radius: 24px;
+           margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.02);
             border: 1px solid #f1f5f9;
         }
         .media-title {
-            text-transform: uppercase; 
-            letter-spacing: 3px; 
+           text-transform: uppercase; 
+           letter-spacing: 3px; 
             font-size: 1rem; 
             color: var(--tech); 
-            margin-bottom: 20px; 
-            font-weight: 800;
+           margin-bottom: 20px; 
+           font-weight: 800;
             display: inline-block;
-            border-bottom: 2px solid var(--tech);
-            padding-bottom: 5px;
+           border-bottom: 2px solid var(--tech);
+           padding-bottom: 5px;
         }
         .media-text { max-width: 850px; margin: 0 auto; font-size: 1.1rem; color: #334155; line-height: 1.7; }
  
@@ -174,15 +160,15 @@
         }
         .video-wrapper {
             position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;
-            background: #000; border-radius: 24px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+           background: #000; border-radius: 24px;
+           box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
         .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
  
        .admin-strength-card {
-            background: white; border: 2px solid var(--tech); border-radius: 25px;
+           background: white; border: 2px solid var(--tech); border-radius: 25px;
             padding: 30px 20px; margin: 40px 0 60px 0; position: relative;
-            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.08); animation: cardFloat 6s ease-in-out infinite;
+           box-shadow: 0 15px 40px rgba(99, 102, 241, 0.08); animation: cardFloat 6s ease-in-out infinite;
         }
  
         @keyframes cardFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
@@ -196,8 +182,8 @@
  
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; margin-bottom: 80px; }
         .card {
-            background: white; padding: 40px; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); 
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); border: 1px solid #f1f5f9; position: relative;
+           background: white; padding: 40px; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); 
+           transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); border: 1px solid #f1f5f9; position: relative;
             overflow: hidden; display: flex; flex-direction: column; min-height: 320px;
         }
         
@@ -252,28 +238,6 @@
  
         footer { text-align: center; padding: 60px 20px; border-top: 1px solid #e2e8f0; background: white; }
         .footer-info { display: flex; align-items: center; justify-content: center; gap: 15px; font-weight: 600; color: #1e293b; flex-wrap: wrap; }
-
-        /* Estilos para los correos en el footer */
-        .footer-emails {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            margin: 20px 0;
-            flex-wrap: wrap;
-        }
-        .email-link {
-            color: var(--tech);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: color 0.3s ease;
-        }
-        .email-link:hover {
-            color: var(--fucsia);
-        }
         
        .instagram-link {
             display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: var(--insta-gradient);
@@ -299,10 +263,6 @@
 </a>
  
 <header>
-    <div class="logo-container">
-        <img src="logolegaltech.webp" alt="Logo LegalTech" class="main-logo">
-    </div>
-
     <div class="header-text">
         <div class="header-badge">
             <a href="https://www.instagram.com/marialeparramartinez" target="_blank" class="instagram-link">
@@ -337,7 +297,7 @@
               <li><strong>Mitigación de Errores:</strong> La digitalización elimina el factor del error humano en la gestión de datos sensibles.</li>
               <li><strong>Transparencia Absoluta:</strong> Centralizar la información fortalece la confianza entre administradoras, juntas de condominio y propietarios.</li>
               <li><strong>Escalabilidad:</strong> Nuestras soluciones permiten que su gestión crezca sin incrementar proporcionalmente los costos operativos.</li>
-            </ul>
+           </ul>
         </div>
     </details>
  
@@ -484,16 +444,6 @@
           </svg>
         </a>
     </div>
-
-    <div class="footer-emails">
-        <a href="mailto:info@legaltech.com.ve" class="email-link">
-            <i class="fa-solid fa-envelope"></i> info@legaltech.com.ve
-        </a>
-        <a href="mailto:cobranzalegal@legaltech.com.ve" class="email-link">
-            <i class="fa-solid fa-file-invoice-dollar"></i> cobranzalegal@legaltech.com.ve
-        </a>
-    </div>
-
     <p style="margin: 15px 0; font-size: 0.9rem; font-weight: 600; color: #334155;">Una iniciativa de la Dra. María Alejandra Parra para la modernización de los condominios en Venezuela.</p>
     <p style="margin-top: 5px; font-size: 0.85rem; color: #94a3b8;">Tecnología: Lisbeth Parra Martínez (LegalTech Advisor) &copy; 2026</p>
 </footer>
@@ -509,18 +459,24 @@
         });
     }, observerOptions);
  
-document.addEventListener("DOMContentLoaded", () => {
+ document.addEventListener("DOMContentLoaded", () => {
         const revealElements = document.querySelectorAll('.reveal');
        revealElements.forEach(el => observer.observe(el));
     });
 </script>
  
 </body>
-</html> 
-     
-    
+</html>   
+      
+  
+ 
                 
      
+
+       
+       
+
+  
 
        
        
