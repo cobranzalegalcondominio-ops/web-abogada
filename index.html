@@ -52,7 +52,7 @@
         .top-bar {
             background-color: #ffffff;
             border-bottom: 1px solid #e2e8f0;
-            padding: 15px 0; /* Aumentado para dar aire al logo grande */
+            padding: 20px 0; 
             width: 100%;
         }
         .top-bar-container {
@@ -64,11 +64,12 @@
             align-items: center;
         }
         .logo-main {
-            height: 140px; /* Tamaño ideal para legibilidad de textos en SVG */
+            height: 120px; /* Altura estética tras la optimización en Inkscape */
             width: auto;
             max-width: 100%;
             display: block;
             object-fit: contain;
+            shape-rendering: geometricPrecision;
         }
 
         header {
@@ -291,7 +292,7 @@
         
         @media (max-width: 600px) {
             .top-bar-container { flex-direction: column; gap: 10px; text-align: center; }
-            .logo-main { height: 100px; } /* Ajuste para móviles */
+            .logo-main { height: 90px; } /* Ajuste para móviles */
             header { padding: 40px 20px; }
             header h1 { font-size: 2rem; }
             .footer-emails a { display: block; margin: 5px 0; }
@@ -303,7 +304,7 @@
 <nav class="top-bar">
     <div class="top-bar-container">
         <div class="logo-wrapper">
-            <img src="logolegaltech.svg" alt="LegalTech Logo" class="logo-main">
+            <img src="logolegaltech.svg" alt="Dra. María Alejandra Parra | Tecnología para condominios" class="logo-main">
         </div>
     </div>
 </nav>
