@@ -48,11 +48,11 @@
             font-display: swap; 
         }
 
-        /* --- BARRA SUPERIOR (LOGO OPTIMIZADO) --- */
+        /* --- BARRA SUPERIOR (ALINEACIÓN IZQUIERDA Y ANTI-DISTORSIÓN) --- */
         .top-bar {
             background-color: #ffffff;
             border-bottom: 1px solid #e2e8f0;
-            padding: 20px 0; 
+            padding: 10px 0; 
             width: 100%;
         }
         .top-bar-container {
@@ -60,15 +60,18 @@
             margin: 0 auto;
             padding: 0 20px;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start; /* Alineado a la izquierda */
             align-items: center;
         }
-        .logo-main {
-            height: 120px; /* Altura estética tras la optimización en Inkscape */
-            width: auto;
-            max-width: 100%;
+        .logo-wrapper {
             display: block;
-            object-fit: contain;
+            margin-left: 0; /* Ajuste para pegar al margen izquierdo de la grilla */
+        }
+        .logo-main {
+            height: auto; /* Mantiene proporción original */
+            max-height: 120px; /* Tamaño estético para el logo optimizado */
+            width: auto; /* Evita que se aplaste o estire lateralmente */
+            display: block;
             shape-rendering: geometricPrecision;
         }
 
@@ -291,8 +294,8 @@
         header .header-text, header .photo-container { animation: fadeInIntro 1.2s ease-out forwards; }
         
         @media (max-width: 600px) {
-            .top-bar-container { flex-direction: column; gap: 10px; text-align: center; }
-            .logo-main { height: 90px; } /* Ajuste para móviles */
+            .top-bar-container { flex-direction: column; gap: 10px; text-align: center; justify-content: center; }
+            .logo-main { height: 90px; } /* Proporcional para móviles */
             header { padding: 40px 20px; }
             header h1 { font-size: 2rem; }
             .footer-emails a { display: block; margin: 5px 0; }
