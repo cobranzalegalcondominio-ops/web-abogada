@@ -47,12 +47,19 @@
             font-display: swap; 
         }
 
+        /* --- AJUSTE DE LOGO Y FRANJA SUPERIOR --- */
+/* --- AJUSTE DE LOGO Y FRANJA SUPERIOR --- */
         .top-bar {
             background-color: #ffffff;
             border-bottom: 1px solid #e2e8f0;
             padding: 10px 0; 
             width: 100%;
+            position: sticky; /* Esto lo fija arriba */
+            top: 0;           /* Pegado al borde superior */
+            z-index: 2000;    /* Por encima de todo */
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
+
         .top-bar-container {
             max-width: 1100px;
             margin: 0 auto;
@@ -61,18 +68,19 @@
             justify-content: flex-start;
             align-items: center;
         }
-       .logo-wrapper {
+
+        .logo-wrapper {
             display: block;
             margin-left: 0;
         }
+
         .logo-main {
-            height: auto;
-            max-height: 180px; /* Lo subimos a 180px para que destaque */
+            height: 80px; /* Aquí ya lo puse un poquito más grande como querías */
             width: auto;
             display: block;
             shape-rendering: geometricPrecision;
-            margin: 5px 0; /* Un pequeño respiro arriba y abajo */
         }
+        /* --------------------------------------- */
 
         header {
             background: linear-gradient(135deg, var(--primary) 0%, #334155 100%);
@@ -291,14 +299,42 @@
 
         @keyframes fadeInIntro { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         header .header-text, header .photo-container { animation: fadeInIntro 1.2s ease-out forwards; }
-        
-        @media (max-width: 600px) {
-            .top-bar-container { flex-direction: column; gap: 10px; text-align: center; justify-content: center; }
-            .logo-main { height: 90px; }
-            header { padding: 40px 20px; }
-            header h1 { font-size: 2rem; }
-            .footer-emails a { display: block; margin: 5px 0; }
+@media (max-width: 600px) {
+            .top-bar-container { 
+                flex-direction: row; /* Mantiene el logo en una línea */
+                justify-content: center; /* Lo centra en la pantalla del celular */
+                padding: 5px 0; 
+            }
+            
+            .logo-main { 
+                height: 55px; /* Tamaño ideal para que se lea "LegalTech" en móviles */
+            }
+
+            header { 
+                padding: 40px 20px; 
+                text-align: center; /* Centra el título y párrafos en el celular */
+            }
+
+            header h1 { 
+                font-size: 1.8rem; /* Evita que el texto sea gigante en el teléfono */
+            }
+
+            .header-btns {
+                justify-content: center; /* Centra el botón de diagnóstico */
+            }
+
+            .photo-container {
+                width: 280px; /* Ajusta la foto para que no ocupe todo el ancho */
+                height: 360px;
+                margin: 0 auto;
+            }
+
+            .footer-emails a { 
+                display: block; 
+                margin: 10px 0; 
+            }
         }
+
     </style>
 </head>
 <body>
@@ -350,7 +386,7 @@
             <li><strong>Mitigación de Errores:</strong> La digitalización elimina el factor del error humano en la gestión de datos sensibles.</li>
             <li><strong>Transparencia Absoluta:</strong> Centralizar la información fortalece la confianza entre administradoras, juntas de condominio y propietarios.</li>
              <li><strong>Escalabilidad:</strong> Nuestras soluciones permiten que su gestión crezca sin incrementar proporcionalmente los costos operativos.</li>
-           </ul>
+            </ul>
         </div>
     </details>
 
@@ -514,8 +550,8 @@
     const observer = new IntersectionObserver((entries) => {
    entries.forEach(entry => {
             if (entry.isIntersecting) {
-               entry.target.classList.add('visible');
-               observer.unobserve(entry.target); 
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); 
             }
         });
     }, observerOptions);
@@ -527,9 +563,5 @@
 </script>
 
 </body>
-</html>
-  
+</html> 
      
-     
-
-           
