@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dra. María Alejandra Parra | LegalTech y Condominios</title>
-    <meta name="description" content="Líder en LegalTech y Derecho Condominal en Caracas. Cobranza automatizada con fuerza legal, gestión multimoneda y blindaje jurídico para condominios.">
-    <meta name="keywords" content="LegalTech Venezuela, Abogado Condominio Caracas, Cobranza Condominio, Prop-Tech, María Alejandra Parra, Automatización Legal">
+    <title>Experta en Materia de Condominio en Venezuela, Derecho Condominal y LPH | Dra. María Alejandra Parra</title>
+    <meta name="description" content="Experta en derecho condominal y LPH en Venezuela. Asesoría legal para Juntas de Condominio, cobranza judicial y gestión de comunidades. Más de 26 años de experiencia.">
+    <meta name="keywords" content="Experta en condominio Venezuela, Abogados en materia condominio, Derecho condominal, LPH Venezuela, Junta de condominio, LegalTech Venezuela, Cobranza Condominio, María Alejandra Parra">
     <meta name="author" content="Lisbeth Parra Martínez">
     <meta name="robots" content="index, follow">
 
@@ -15,9 +15,34 @@
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.legaltech.com.ve/">
-    <meta property="og:title" content="Abogada María Alejandra Parra | LegalTech & Prop-Tech">
-    <meta property="og:description" content="Transformamos la gestión de su condominio con soluciones legales de alta tecnología y cobranza ejecutable.">
+    <meta property="og:title" content="Experta en Materia de Condominio en Venezuela, Derecho Condominal y LPH | Dra. María Alejandra Parra">
+    <meta property="og:description" content="Experta en derecho condominal y LPH en Venezuela. Transformamos la gestión de su condominio con soluciones legales y tecnología.">
     <meta property="og:image" content="https://cobranzalegalcondominio-ops.github.io/web-abogada/foto-abogada.webp">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Attorney",
+      "name": "Dra. María Alejandra Parra",
+      "description": "Experta en materia de condominio en Venezuela. Abogada especialista en derecho condominal y LPH.",
+      "image": "https://www.legaltech.com.ve/foto-abogada.webp",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Principal de Las Mercedes, Edif. Centro Ejecutivo, Oficina 4B",
+        "addressLocality": "Caracas",
+        "addressRegion": "Distrito Capital",
+        "addressCountry": "VE"
+      },
+      "telephone": "+584242624559",
+      "email": "info@legaltech.com.ve",
+      "url": "https://www.legaltech.com.ve",
+      "priceRange": "$$",
+      "openingHours": "Mo-Fr 09:00-18:00",
+      "sameAs": [
+        "https://www.instagram.com/marialeparramartinez"
+      ]
+    }
+    </script>
 
     <link rel="preload" as="image" href="foto-abogada.webp" type="image/webp">
     
@@ -47,16 +72,14 @@
             font-display: swap; 
         }
 
-        /* --- AJUSTE DE LOGO Y FRANJA SUPERIOR --- */
-/* --- AJUSTE DE LOGO Y FRANJA SUPERIOR --- */
         .top-bar {
             background-color: #ffffff;
             border-bottom: 1px solid #e2e8f0;
             padding: 10px 0; 
             width: 100%;
-            position: sticky; /* Esto lo fija arriba */
-            top: 0;           /* Pegado al borde superior */
-            z-index: 2000;    /* Por encima de todo */
+            position: sticky;
+            top: 0;
+            z-index: 2000;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
@@ -75,12 +98,11 @@
         }
 
         .logo-main {
-            height: 80px; /* Aquí ya lo puse un poquito más grande como querías */
+            height: 80px;
             width: auto;
             display: block;
             shape-rendering: geometricPrecision;
         }
-        /* --------------------------------------- */
 
         header {
             background: linear-gradient(135deg, var(--primary) 0%, #334155 100%);
@@ -106,7 +128,15 @@
         }
 
         header h1 { font-size: 2.8rem; margin-bottom: 20px; font-weight: 700; line-height: 1.1; }
-        header p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 35px; }
+        
+        /* --- JUSTIFICACIÓN DEL PÁRRAFO DEL HEADER --- */
+        header p { 
+            font-size: 1.1rem; 
+            opacity: 0.9; 
+            margin-bottom: 35px; 
+            text-align: justify; /* <-- NUEVO: justificado */
+        }
+        
         .header-btns { display: flex; gap: 15px; flex-wrap: wrap; }
         
         .photo-container {
@@ -149,7 +179,12 @@
         .seo-accordion[open] summary::after { transform: rotate(180deg); }
         .seo-accordion[open] { border-color: var(--tech); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
         .accordion-content { padding: 0 20px 20px 20px; color: var(--text-muted); font-size: 0.95rem; }
-        .accordion-content p { margin-bottom: 15px; }
+        
+        /* --- JUSTIFICACIÓN EN ACORDEONES --- */
+        .accordion-content p { 
+            margin-bottom: 15px; 
+            text-align: justify; /* <-- NUEVO */
+        }
         .accordion-content ul { padding-left: 20px; margin-bottom: 15px; }
         .accordion-content li { margin-bottom: 8px; }
 
@@ -184,7 +219,16 @@
             border-bottom: 2px solid var(--tech);
             padding-bottom: 5px;
         }
-        .media-text { max-width: 850px; margin: 0 auto; font-size: 1.1rem; color: #334155; line-height: 1.7; }
+        
+        /* --- JUSTIFICACIÓN DEL TEXTO DE MEDIOS --- */
+        .media-text { 
+            max-width: 850px; 
+            margin: 0 auto; 
+            font-size: 1.1rem; 
+            color: #334155; 
+            line-height: 1.7; 
+            text-align: justify; /* <-- NUEVO */
+        }
 
         .video-container-box {
             max-width: 800px;
@@ -242,6 +286,12 @@
         .card-gov:hover i { color: var(--accent); transform: scale(1.1); }
 
         .card h3 { margin-bottom: 15px; font-weight: 700; }
+        
+        /* --- JUSTIFICACIÓN EN TARJETAS (párrafos) --- */
+        .card p { 
+            text-align: justify; /* <-- NUEVO */
+        }
+        
         .card-footer-tag { margin-top: auto; padding-top: 15px; font-size: 0.8rem; font-weight: 700; color: var(--text-muted); border-top: 1px solid #f1f5f9; text-transform: uppercase; }
 
         .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 40px 0 80px 0; }
@@ -250,7 +300,17 @@
             border: 1px solid #edf2f7; transition: all 0.4s ease; position: relative;
         }
         .testimonial-card:hover { transform: translateY(-5px); border-color: var(--tech); box-shadow: 0 15px 30px rgba(99, 102, 241, 0.1); }
-        .testimonial-text { position: relative; font-size: 0.95rem; color: #4a5568; margin-bottom: 25px; z-index: 1; font-style: italic; }
+        
+        /* --- JUSTIFICACIÓN EN TESTIMONIOS --- */
+        .testimonial-text { 
+            position: relative; 
+            font-size: 0.95rem; 
+            color: #4a5568; 
+            margin-bottom: 25px; 
+            z-index: 1; 
+            font-style: italic; 
+            text-align: justify; /* <-- NUEVO */
+        }
         .testimonial-text::before { content: "\201C"; font-family: serif; font-size: 4rem; color: #edf2f7; position: absolute; top: -25px; left: -15px; z-index: -1; }
         .testimonial-author { border-top: 1px solid #f1f5f9; padding-top: 20px; font-weight: 700; font-size: 0.9rem; color: var(--primary); }
 
@@ -276,6 +336,7 @@
         .btn-sys-card:active, .btn-ws:active { transform: scale(0.96); }
 
         .cta-box { background: var(--secondary); color: white; padding: 70px 40px; border-radius: 24px; text-align: center; margin: 60px 0; }
+        .cta-box h2 { font-size: 2.2rem; margin-bottom: 15px; }
 
         footer { text-align: center; padding: 60px 20px; border-top: 1px solid #e2e8f0; background: white; }
         .footer-info { display: flex; align-items: center; justify-content: center; gap: 15px; font-weight: 600; color: #1e293b; flex-wrap: wrap; margin-bottom: 10px; }
@@ -299,42 +360,20 @@
 
         @keyframes fadeInIntro { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         header .header-text, header .photo-container { animation: fadeInIntro 1.2s ease-out forwards; }
-@media (max-width: 600px) {
+
+        @media (max-width: 600px) {
             .top-bar-container { 
-                flex-direction: row; /* Mantiene el logo en una línea */
-                justify-content: center; /* Lo centra en la pantalla del celular */
+                flex-direction: row;
+                justify-content: center;
                 padding: 5px 0; 
-            }
-            
-            .logo-main { 
-                height: 55px; /* Tamaño ideal para que se lea "LegalTech" en móviles */
-            }
-
-            header { 
-                padding: 40px 20px; 
-                text-align: center; /* Centra el título y párrafos en el celular */
-            }
-
-            header h1 { 
-                font-size: 1.8rem; /* Evita que el texto sea gigante en el teléfono */
-            }
-
-            .header-btns {
-                justify-content: center; /* Centra el botón de diagnóstico */
-            }
-
-            .photo-container {
-                width: 280px; /* Ajusta la foto para que no ocupe todo el ancho */
-                height: 360px;
-                margin: 0 auto;
-            }
-
-            .footer-emails a { 
-                display: block; 
-                margin: 10px 0; 
-            }
+            } 
+            .logo-main { height: 55px; }
+            header { padding: 40px 20px; text-align: center; }
+            header h1 { font-size: 1.8rem; }
+            .header-btns { justify-content: center; }
+            .photo-container { width: 280px; height: 360px; margin: 0 auto; }
+            .footer-emails a { display: block; margin: 10px 0; }
         }
-
     </style>
 </head>
 <body>
@@ -342,7 +381,7 @@
 <nav class="top-bar">
     <div class="top-bar-container">
         <div class="logo-wrapper">
-            <img src="logolegaltech.svg?v=99" alt="Dra. María Alejandra Parra | Tecnología para condominios" class="logo-main">
+            <img src="logolegaltech.svg?v=99" alt="Dra. María Alejandra Parra | Experta en Derecho Condominal" class="logo-main">
         </div>
     </div>
 </nav>
@@ -364,36 +403,40 @@
             <span>@marialeparramartinez</span>
         </div>
 
-     <h1>Abogada María Alejandra Parra: Pionera en la transformación LegalTech para Condominios en Venezuela</h1>
-   <p>Experticia jurídica combinada con herramientas de última generación. Optimizamos la recaudación y el blindaje legal de su condominio con procesos ejecutables en Caracas.</p>
+        <h1>Experta en Materia de Condominio en Venezuela, Derecho Condominal y LPH</h1>
+        
+        <p>
+            Dra. María Alejandra Parra, experta en materia de condominio en Venezuela, con más de 26 años de trayectoria en derecho condominal y Ley de Propiedad Horizontal (LPH). Asesoramos a Juntas de Condominio, administradores y propietarios con soluciones legales y tecnológicas (LegalTech) para optimizar la gestión, cobranza y gobernanza de su comunidad.
+        </p>
+        
         <div class="header-btns">
             <a href="https://wa.me/584242624559?text=Buen%20d%C3%ADa%2C%20Dra.%20Mar%C3%ADa%20Alejandra.%20Quisiera%20agendar%20un%20diagn%C3%B3stico%20LegalTech%20para%20mi%20gesti%C3%B3n%20inmobiliaria." class="btn-ws">Solicitar Diagnóstico LegalTech</a>
         </div>
     </div>
     <div class="photo-container">
-        <img src="foto-abogada.webp" alt="Abogada María Alejandra Parra" class="header-photo" width="320" height="420">
+        <img src="foto-abogada.webp" alt="Dra. María Alejandra Parra - Experta en condominio en Venezuela" class="header-photo" width="320" height="420">
     </div>
 </header>
 
 <div class="container">
     
     <details class="seo-accordion reveal">
-    <summary>¿Por qué evolucionar hacia LegalTech en condominio? (Ver Beneficios)</summary>
+        <summary>¿Por qué evolucionar hacia LegalTech en condominio? (Ver Beneficios)</summary>
         <div class="accordion-content">
-           <p>La integración de tecnología avanzada en el ámbito jurídico y administrativo no es solo una modernización estética, es una <strong>ventaja competitiva estratégica</strong>. En un entorno cada vez más exigente, la transformación digital ofrece beneficios tangibles:</p>
+            <p>La integración de tecnología avanzada en el ámbito jurídico y administrativo no es solo una modernización estética, es una <strong>ventaja competitiva estratégica</strong>. Como <strong>experta en derecho condominal</strong>, la Dra. Parra impulsa la transformación digital de las comunidades en Venezuela, brindando herramientas que fortalecen la transparencia y la eficiencia.</p>
             <ul>
-               <li><strong>Eficiencia Operativa:</strong> Automatizamos tareas repetitivas y procesos de conciliación, reduciendo los tiempos de respuesta en más de un 50%.</li>
-            <li><strong>Mitigación de Errores:</strong> La digitalización elimina el factor del error humano en la gestión de datos sensibles.</li>
-            <li><strong>Transparencia Absoluta:</strong> Centralizar la información fortalece la confianza entre administradoras, juntas de condominio y propietarios.</li>
-             <li><strong>Escalabilidad:</strong> Nuestras soluciones permiten que su gestión crezca sin incrementar proporcionalmente los costos operativos.</li>
+                <li><strong>Eficiencia Operativa:</strong> Automatizamos tareas repetitivas y procesos de conciliación, reduciendo los tiempos de respuesta en más de un 50%.</li>
+                <li><strong>Mitigación de Errores:</strong> La digitalización elimina el factor del error humano en la gestión de datos sensibles.</li>
+                <li><strong>Transparencia Absoluta:</strong> Centralizar la información fortalece la confianza entre administradoras, juntas de condominio y propietarios.</li>
+                <li><strong>Escalabilidad:</strong> Nuestras soluciones permiten que su gestión crezca sin incrementar proporcionalmente los costos operativos.</li>
             </ul>
         </div>
     </details>
 
     <div class="media-section reveal">
-        <p class="media-title">Referencia en Medios Nacionales</p>
+        <p class="media-title">Referente en Derecho Condominal y LPH en Venezuela</p>
         <p class="media-text">
-            Consultora experta en <strong>Derecho Condominal</strong> y pionera en <strong>la transformación LegalTech para condominios</strong>...
+            Consultora <strong>experta en materia de condominio</strong> y pionera en la transformación <strong>LegalTech para condominios en Venezuela</strong>, con un enfoque práctico y actualizado en la Ley de Propiedad Horizontal.
         </p>
     </div>
 
@@ -401,154 +444,154 @@
         <div class="video-wrapper" style="background-image: url('https://img.youtube.com/vi/Mt8Mdg6NDO0/maxresdefault.jpg'); background-size: cover; background-position: center; cursor: pointer;" onclick="window.open('https://www.youtube.com/watch?v=Mt8Mdg6NDO0', '_blank')">
             <div class="play-btn" style="background: rgba(255,0,0,0.9); width: 80px; height: 55px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; box-shadow: 0 10px 20px rgba(0,0,0,0.3); transition: all 0.3s ease;">
                 <i class="fa-solid fa-play"></i>
-          </div>
+            </div>
             <div style="position: absolute; bottom: 0; background: rgba(0,0,0,0.7); width: 100%; color: white; padding: 10px; text-align: center; font-size: 0.9rem; font-weight: 600;">
                 Ver Entrevista: La Morosidad en los Condominios
-          </div>
+            </div>
         </div>
     </div>
 
     <div class="admin-strength-card reveal">
-        <div class="admin-label">Solo para Administradoras</div>
+        <div class="admin-label">Solo para Administradoras y Juntas de Condominio</div>
         <div class="strength-flex">
             <div class="strength-item">
-               <div class="strength-icon"><i class="fa-solid fa-comments-dollar"></i></div>
-               <div class="strength-text">
-               <h4>Multimoneda</h4>
-               <p>Gestión automatizada en divisas.</p>
-           </div>
-          </div>
+                <div class="strength-icon"><i class="fa-solid fa-comments-dollar"></i></div>
+                <div class="strength-text">
+                    <h4>Multimoneda</h4>
+                    <p>Gestión automatizada en divisas.</p>
+                </div>
+            </div>
             <div class="strength-item">
-               <div class="strength-icon"><i class="fa-solid fa-scale-balanced"></i></div>
-               <div class="strength-text">
-               <h4>Apegado a la LPH</h4>
-               <p>Soportes con fuerza de ley.</p>
-           </div>
-          </div>
+                <div class="strength-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                <div class="strength-text">
+                    <h4>Apegado a la LPH</h4>
+                    <p>Soportes con fuerza de ley.</p>
+                </div>
+            </div>
             <div class="strength-item">
-               <div class="strength-icon"><i class="fa-solid fa-file-shield"></i></div>
-               <div class="strength-text">
-               <h4>Auditoría Total</h4>
-               <p>Trazabilidad sin conflictos.</p>
-           </div>
-          </div>
-             <div class="strength-item">
-               <div class="strength-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
-               <div class="strength-text">
-               <h4>Conciliación Auto</h4>
-               <p>Sincronización bancaria veloz.</p>
-           </div>
-          </div>
+                <div class="strength-icon"><i class="fa-solid fa-file-shield"></i></div>
+                <div class="strength-text">
+                    <h4>Auditoría Total</h4>
+                    <p>Trazabilidad sin conflictos.</p>
+                </div>
+            </div>
+            <div class="strength-item">
+                <div class="strength-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
+                <div class="strength-text">
+                    <h4>Conciliación Auto</h4>
+                    <p>Sincronización bancaria veloz.</p>
+                </div>
+            </div>
             <div style="width: 100%; display: flex; justify-content: center; margin-top: 25px; padding: 0 10px;">
                 <a href="https://soft-ia.com/inicio/inicioxadmin/323533" class="btn-sys-card" target="_blank">
-                 <i class="fa-solid fa-right-to-bracket"></i>
-                Acceso Exclusivo al Sistema
-            </a>
-          </div>
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                    Acceso Exclusivo al Sistema
+                </a>
+            </div>
         </div>
     </div>
 
     <div class="services-grid">
         <div class="card card-cobranza reveal">
             <i class="fa-solid fa-microchip"></i>
-       <h3>Cobranza Inteligente</h3>
-       <p>Modelos de gestión extrajudicial y judicial con <strong>costo cero para el condominio</strong>. Honorarios por éxito cargados directamente al deudor.</p>
+            <h3>Cobranza Inteligente</h3>
+            <p>Modelos de gestión extrajudicial y judicial con <strong>costo cero para el condominio</strong>. Honorarios por éxito cargados directamente al deudor.</p>
             <div class="card-footer-tag">RECUPERACIÓN EFECTIVA</div>
         </div>
 
         <div class="card card-legal reveal">
             <i class="fa-solid fa-scale-balanced"></i>
-       <h3>Blindaje Jurídico</h3>
+            <h3>Blindaje Jurídico</h3>
             <p style="color: var(--secondary); font-weight: 700; margin-bottom: 5px;">26 años de trayectoria</p>
-        <p>Especialistas en <strong>Derecho Condominal y Laboral</strong>. Asesoría integral para la gestión de personal y cumplimiento normativo del edificio.</p>
+            <p>Especialistas en <strong>Derecho Condominal y LPH</strong>. Asesoría integral para la gestión de personal y cumplimiento normativo del edificio.</p>
             <div class="card-footer-tag">PROTECCIÓN PATRIMONIAL</div>
         </div>
 
         <div class="card card-infra reveal">
             <i class="fa-solid fa-building-shield"></i>
-       <h3>Gestión de Infraestructura</h3>
-       <p>Supervisión técnica especializada para mantener su patrimonio inmobiliario mediante auditorías y planificación operativa eficiente.</p>
+            <h3>Gestión de Infraestructura</h3>
+            <p>Supervisión técnica especializada para mantener su patrimonio inmobiliario mediante auditorías y planificación operativa eficiente.</p>
             <div class="card-footer-tag">AUDITORÍA TÉCNICA</div>
         </div>
 
         <div class="card card-it reveal">
             <i class="fa-solid fa-robot"></i>
-       <h3>Automatización IT</h3>
-       <p>Eliminamos el error humano transformando flujos manuales en <strong>procesos digitales</strong> de alta eficiencia y precisión absoluta.</p>
-           <div class="card-footer-tag">EFICIENCIA DIGITAL</div>
+            <h3>Automatización IT</h3>
+            <p>Eliminamos el error humano transformando flujos manuales en <strong>procesos digitales</strong> de alta eficiencia y precisión absoluta.</p>
+            <div class="card-footer-tag">EFICIENCIA DIGITAL</div>
         </div>
 
         <div class="card card-gov reveal">
             <i class="fa-solid fa-handshake"></i>
-       <h3>Gobernanza Digital</h3>
-          <p>Un ecosistema eficiente donde la <strong>Junta comunica</strong>, la <strong>Comunidad participa</strong> y la <strong>Administradora garantiza transparencia</strong> total.</p>
+            <h3>Gobernanza Digital</h3>
+            <p>Un ecosistema eficiente donde la <strong>Junta comunica</strong>, la <strong>Comunidad participa</strong> y la <strong>Administradora garantiza transparencia</strong> total.</p>
             <div class="card-footer-tag">TRANSPARENCIA ACTIVA</div>
-      </div>
+        </div>
 
         <div class="card card-gov reveal">
             <i class="fa-solid fa-users-gear"></i>
-       <h3>Talleres Formativos</h3>
-        <p>Capacitación especializada para <strong>Juntas de Condominio</strong> y Asambleas de Propietarios sobre gobernanza y transparencia total.</p>
+            <h3>Talleres Formativos</h3>
+            <p>Capacitación especializada para <strong>Juntas de Condominio</strong> y Asambleas de Propietarios sobre gobernanza y transparencia total.</p>
             <div class="card-footer-tag">FORMACIÓN CIUDADANA</div>
         </div>
     </div>
 
     <details class="seo-accordion reveal">
-    <summary>Sobre la Visión de LegalTech para condominios en Venezuela (Nuestra Historia)</summary>
+        <summary>Sobre la Visión de LegalTech para condominios en Venezuela (Nuestra Historia)</summary>
         <div class="accordion-content">
-        <p>Nuestra visión nace de la necesidad de cerrar la brecha entre el derecho tradicional y las posibilidades infinitas de la era digital. Como <strong>pioneros en la transformación LegalTech para condominios en Venezuela</strong>, nos dedicamos a diseñar ecosistemas tecnológicos que humanizan la gestión administrativa.</p>
-          <p>No nos limitamos a instalar herramientas; transformamos la cultura organizacional de condominios. Nuestra misión es empoderar a los profesionales del sector con soluciones de vanguardia —desde integraciones vía API hasta sistemas de conciliación automatizada— asegurando que la innovación sea siempre el motor que impulse su seguridad jurídica y financiera.</p>
-        <p><strong>Una iniciativa de la Dra. María Alejandra Parra para la modernización de los condominios en Venezuela.</strong></p>
+            <p>Nuestra visión nace de la necesidad de cerrar la brecha entre el derecho tradicional y las posibilidades infinitas de la era digital. Como <strong>pioneros en la transformación LegalTech para condominios en Venezuela</strong>, nos dedicamos a diseñar ecosistemas tecnológicos que humanizan la gestión administrativa. La <strong>experta en materia de condominio</strong>, Dra. María Alejandra Parra, lidera este enfoque innovador, brindando soluciones que fortalecen a las Juntas de Condominio y aseguran el cumplimiento de la LPH.</p>
+            <p>No nos limitamos a instalar herramientas; transformamos la cultura organizacional de condominios. Nuestra misión es empoderar a los profesionales del sector con soluciones de vanguardia —desde integraciones vía API hasta sistemas de conciliación automatizada— asegurando que la innovación sea siempre el motor que impulse su seguridad jurídica y financiera.</p>
+            <p><strong>Una iniciativa de la Dra. María Alejandra Parra, experta en derecho condominal, para la modernización de los condominios en Venezuela.</strong></p>
         </div>
     </details>
 
-    <h2 style="text-align: center; font-size: 2rem; margin-bottom: 40px;" class="reveal">Confianza y Resultados</h2>
+    <h2 style="text-align: center; font-size: 2rem; margin-bottom: 40px;" class="reveal">Confianza y Resultados en Venezuela</h2>
     <div class="testimonials-grid">
         <div class="testimonial-card reveal">
             <p class="testimonial-text">"No esperaban semejante nivel de exposición. La reunión fue extensa y exigente, pero la Dra. Parra mantuvo el control con una claridad jurídica que dejó a todos paralizados."</p>
-            <div class="testimonial-author">Junta de Condominio, Edificio Valle Verde</div>
-      </div>
-        <div class="testimonial-card reveal">
-            <p class="testimonial-text">"Agradezco profundamente la gestión de la Dra. Parra. No solo logramos saldar la deuda por completo, sino que el proceso fue impecable. Su profesionalismo marca la diferencia."</p>
-            <div class="testimonial-author">Copropietario, Edificio Suerte</div>
+            <div class="testimonial-author">Junta de Condominio, Edificio Valle Verde – <strong>Caracas</strong></div>
         </div>
         <div class="testimonial-card reveal">
-            <p class="testimonial-text">"Excelente profesionalismo. La Dra. María Alejandra combina una experticia jurídica única con una calidez humana que facilita enormemente la resolución de conflictos."</p>
-            <div class="testimonial-author">Administración, Edificio Tiniquijina</div>
+            <p class="testimonial-text">"Agradezco profundamente la gestión de la Dra. Parra. No solo logramos saldar la deuda por completo, sino que el proceso fue impecable. Su profesionalismo marca la diferencia."</p>
+            <div class="testimonial-author">Copropietario, Edificio Suerte – <strong>Caracas</strong></div>
+        </div>
+        <div class="testimonial-card reveal">
+            <p class="testimonial-text">"Excelente profesionalismo. La Dra. María Alejandra combina una experticia jurídica única en derecho condominal con una calidez humana que facilita enormemente la resolución de conflictos."</p>
+            <div class="testimonial-author">Administración, Edificio Tiniquijina – <strong>Venezuela</strong></div>
         </div>
     </div>
 
     <div class="cta-box reveal">
-        <h2 style="font-size: 2.2rem; margin-bottom: 15px;">¿Listo para transformar la gestión de su comunidad?</h2>
+        <h2>¿Listo para transformar la gestión de su comunidad en Venezuela?</h2>
         <a href="https://wa.me/584242624559?text=Buen%20d%C3%ADa%2C%20Dra.%20Mar%C3%ADa%20Alejandra.%20Quisiera%20agendar%20un%20diagn%C3%B3stico%20LegalTech%20para%20mi%20gesti%C3%B3n%20inmobiliaria." class="btn-ws">Consultoría LegalTech</a>
     </div>
 </div>
 
 <footer>
     <div class="footer-info">
-   <span>Abogada María Alejandra Parra</span>
-   <span>|</span>
-   <span>Caracas, Venezuela</span>
+        <span>Dra. María Alejandra Parra</span>
+        <span>|</span>
+        <span>Experta en Materia de Condominio en Venezuela</span>
         <a href="https://www.instagram.com/marialeparramartinez" target="_blank" class="instagram-link">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-          </svg>
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
         </a>
     </div>
     <div class="footer-emails">
         <a href="mailto:info@legaltech.com.ve">info@legaltech.com.ve</a>
         <a href="mailto:cobranzalegal@legaltech.com.ve">cobranzalegal@legaltech.com.ve</a>
     </div>
-    <p style="margin: 15px 0; font-size: 0.9rem; font-weight: 600; color: #334155;">Una iniciativa de la Dra. María Alejandra Parra para la modernización de los condominios en Venezuela.</p>
+    <p style="margin: 15px 0; font-size: 0.9rem; font-weight: 600; color: #334155;">Especialista en Derecho Condominal y LPH en Venezuela.</p>
     <p style="margin-top: 5px; font-size: 0.85rem; color: #94a3b8;">Tecnología: Lisbeth Parra Martínez (LegalTech Advisor) &copy; 2026</p>
 </footer>
 
 <script>
     const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
     const observer = new IntersectionObserver((entries) => {
-   entries.forEach(entry => {
+        entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
                 observer.unobserve(entry.target); 
@@ -556,12 +599,11 @@
         });
     }, observerOptions);
 
-  document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", () => {
         const revealElements = document.querySelectorAll('.reveal');
-     revealElements.forEach(el => observer.observe(el));
+        revealElements.forEach(el => observer.observe(el));
     });
 </script>
 
 </body>
-</html> 
-     
+</html>
